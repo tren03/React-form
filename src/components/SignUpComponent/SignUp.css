@@ -1,0 +1,29 @@
+.signin-container {
+  width: 100%;
+}
+
+.submitbutton-container {
+  margin-top: 1rem;
+}
+
+.name-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.phone-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 450px) {
+  .name-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .phone-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

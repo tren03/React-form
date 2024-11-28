@@ -1,5 +1,5 @@
 import React from "react";
-import { SignIn } from "../SignInComponent/SignIn";
+import { SignUp } from "../SignUpComponent/SignUp";
 import { Switch } from "../SwitchComponent/Switch";
 import { Login } from "../LoginComponent/Login";
 import "./Form.css";
@@ -17,7 +17,7 @@ export const Form = ({
   return (
     <div className="form-outer-container">
       <Heading mode={mode} />
-      <Switch setMode={setMode} />
+      <Switch mode={mode} setMode={setMode} />
       <form className="form-container">
         {mode === "Login" ? (
           <Login
@@ -26,7 +26,7 @@ export const Form = ({
             setLoginDeets={setLoginDeets}
           />
         ) : (
-          <SignIn
+          <SignUp
             mode={mode}
             signinDeets={signinDeets}
             setSigninDeets={setSigninDeets}

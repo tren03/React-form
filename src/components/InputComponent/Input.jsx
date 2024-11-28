@@ -11,7 +11,7 @@ export const Input = ({
   required = false,
 }) => {
   return (
-    <div>
+    <>
       <input
         type={type}
         id={id}
@@ -21,6 +21,6 @@ export const Input = ({
         onChange={onChange}
         required={required}
       />
-    </div>
+    </>
   );
 };

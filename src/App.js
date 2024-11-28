@@ -9,7 +9,11 @@ function App() {
     password: "",
   });
   const [signinDeets, setSigninDeets] = useState({
+    first_name: "",
+    last_name: "",
+    user_name: "",
     email: "",
+    phone: "",
     password: "",
     confirm_password: "",
   });

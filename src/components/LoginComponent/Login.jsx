@@ -2,6 +2,7 @@ import "./Login.css";
 import { Input } from "../InputComponent/Input";
 import { useState } from "react";
 import { Error } from "../ErrorComponent/Error";
+import { Forgot } from "../ForgotComponent/Forgot";
 export const Login = ({ mode, loginDeets, setLoginDeets }) => {
   const [err, setErr] = useState({
     email: false,
@@ -98,6 +99,7 @@ export const Login = ({ mode, loginDeets, setLoginDeets }) => {
       {err.password === true && (
         <Error error="This password has less than 6 letters. " />
       )}
+      <Forgot />
 
       <div className="submitbutton-container">
         <button onClick={(event) => submitForm(event)}> {mode} </button>

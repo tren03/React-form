@@ -1,10 +1,18 @@
 .login-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  width: 100%;
 }
 
 .submitbutton-container {
   margin-top: 1rem;
+}
+
+.submitbutton-container button {
+  font-size: 1.3rem;
+  width: 100%;
+  padding: 0.5rem;
+  font-weight: bold; /* Make text bold */
+  color: #fff; /* Text color */
+  background-color: #007bff; /* Button background color */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor on hover */
 }
