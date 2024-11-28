@@ -1,0 +1,28 @@
+/* Input Field Styling */
+input {
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-down: 0.5rem;
+  padding: 1rem;
+  color: #333; /* Ensures the text is visible */
+  background-color: #fff; /* White background for contrast */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Focus State */
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Placeholder Text */
+input::placeholder {
+  color: #aaa; /* Light gray placeholder for readability */
+  font-size: 14px;
+}

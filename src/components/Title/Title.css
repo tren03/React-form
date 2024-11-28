@@ -1,0 +1,37 @@
+/* Button Styling */
+.title-container {
+  flex: 1;
+}
+button {
+  font-size: 1.3rem;
+  width: 100%;
+  padding: 0.5rem;
+  font-weight: bold; /* Make text bold */
+  color: #fff; /* Text color */
+  background-color: #007bff; /* Button background color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease; /* Add smooth transitions */
+}
+
+/* Hover Effect */
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Focus Effect */
+button:focus {
+  outline: 2px solid #0056b3; /* Add focus outline */
+  outline-offset: 2px;
+}
+
+/* Disabled Button Styling */
+button:disabled {
+  background-color: #ccc; /* Gray background for disabled button */
+  color: #666; /* Light text color */
+  cursor: not-allowed; /* Disabled cursor */
+}

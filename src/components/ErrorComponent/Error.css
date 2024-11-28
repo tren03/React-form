@@ -1,0 +1,6 @@
+.error {
+  color: red; /* Red color to indicate error */
+  font-size: 1rem; /* Reasonable font size */
+  font-weight: bold; /* Make the error stand out */
+  /* display: inline-block;  */
+}
