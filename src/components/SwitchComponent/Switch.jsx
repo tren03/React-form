@@ -18,7 +18,7 @@ export const Switch = ({ mode, setMode }) => {
             setMode={setMode}
           />
           <Title
-            titleText="SignUp"
+            titleText="Sign Up"
             buttonColor="rgba(255,255,255,0)"
             textColor="#000000"
             setMode={setMode}
@@ -33,7 +33,7 @@ export const Switch = ({ mode, setMode }) => {
             setMode={setMode}
           />
           <Title
-            titleText="SignUp"
+            titleText="Sign Up"
             buttonColor="#007bff"
             textColor="#ffffff"
             setMode={setMode}

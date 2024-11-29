@@ -6,11 +6,11 @@
   margin-top: 1rem;
 }
 
-.name-container {
+.firstname-lastname-container {
   display: flex;
   gap: 0.5rem;
 }
-.phone-container {
+.username-phone-container {
   display: flex;
   gap: 0.5rem;
 }

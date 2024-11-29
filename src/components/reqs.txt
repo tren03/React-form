@@ -1,0 +1,4 @@
+password hidden - passwords has to have _,@
+all validations triggered based on custom code
+
+

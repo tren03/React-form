@@ -1,5 +1,6 @@
 import "./SignUp.css";
 import { useState } from "react";
+import { useEffect } from "react";
 import { Error } from "../ErrorComponent/Error";
 import { Input } from "../InputComponent/Input";
 export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
@@ -12,16 +13,16 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
     password: false,
     confirm_password: false,
   });
-  const [flag, setFlag] = useState(false);
 
+  // if field is empty, returns true
   function isEmpty(val) {
-    console.log("reached");
     if (signinDeets[val] === "") {
       return true;
     }
     return false;
   }
 
+  // if email is valid, returns true
   function isEmailValid() {
     const emailRegex = /\S+@\S+\.\S+/; // Basic email regex
     if (emailRegex.test(signinDeets.email)) {
@@ -31,14 +32,16 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
     }
   }
 
+  // is pass is valid, returns true
   function isPassValid() {
-    if (signinDeets.password.length < 6) {
-      return false;
-    } else {
+    if (signinDeets.password.length >= 6) {
       return true;
+    } else {
+      return false;
     }
   }
 
+  // if confirm pass is valid, returns true
   function isConfirmPassValid() {
     if (signinDeets.password === signinDeets.confirm_password) {
       return true;
@@ -49,51 +52,66 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
 
   function submitForm(event) {
     event.preventDefault(); // Prevent default form submission behavior
-    // console.log("all should be true", err);
     let valToCheck = ["first_name", "last_name", "user_name", "phone"];
 
-    if (!isEmailValid()) {
-      let copyErr = { ...err };
-      copyErr.email = true;
-      setErr(copyErr);
-      return;
-    } else {
-      let copyErr = { ...err };
-      copyErr.email = false;
-      setErr(copyErr);
-    }
+    let copyErr = { ...err };
 
-    if (!isPassValid()) {
-      let copyErr = { ...err };
-      copyErr.password = true;
-      setErr(copyErr);
-    } else {
-      let copyErr = { ...err };
-      copyErr.password = false;
-      setErr(copyErr);
-    }
-    if (!isConfirmPassValid()) {
-      let copyErr = { ...err };
-      copyErr.confirm_password = true;
-      setErr(copyErr);
-      return;
-    } else {
-      let copyErr = { ...setErr };
-      copyErr.confirm_password = false;
-      setErr(copyErr);
-    }
+    let flag = false;
 
-    console.log(signinDeets);
-    setSigninDeets({
-      first_name: "",
-      last_name: "",
-      user_name: "",
-      email: "",
-      password: "",
-      phone: "",
-      confirm_password: "",
+    valToCheck.forEach((item) => {
+      if (isEmpty(item)) {
+        copyErr[item] = true;
+        flag = true;
+      } else {
+        copyErr[item] = false;
+      }
     });
+
+    // if email is not valid, set err field to true
+    if (!isEmailValid()) {
+      copyErr.email = true;
+      flag = true;
+    } else {
+      copyErr.email = false;
+    }
+
+    // if pass is not valid, set err field to true
+    if (!isPassValid()) {
+      copyErr.password = true;
+      flag = true;
+    } else {
+      copyErr.password = false;
+    }
+
+    // if confirmpass is not valid, set err field to true
+    if (!isConfirmPassValid()) {
+      copyErr.confirm_password = true;
+      flag = true;
+    } else {
+      copyErr.confirm_password = false;
+    }
+
+    // set error object
+    setErr(copyErr);
+    console.log(flag);
+
+    if (flag === true) {
+      return;
+    } else {
+      console.log("reached");
+      console.log(signinDeets);
+      setSigninDeets({
+        first_name: "",
+        last_name: "",
+        user_name: "",
+        email: "",
+        password: "",
+        phone: "",
+        confirm_password: "",
+      });
+    }
   }
+
   function handleChange(event) {
     let field = event.target.id;
     let value = event.target.value;
@@ -105,7 +123,7 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
 
   return (
     <div className="signin-container">
-      <div className="name-container">
+      <div className="firstname-lastname-container">
         <Input
           type="text"
           id="first_name"
@@ -117,7 +135,7 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
           }}
           required={true}
         />
-        {err.first_name === true && <Error error="First Name is empty" />}
+        {err.last_name === true && <Error error="First Name is empty" />}
         <Input
           type="text"
           id="last_name"
@@ -131,7 +149,7 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
         />
       </div>
       {err.last_name === true && <Error error="Last Name is empty" />}
-      <div className="phone-container">
+      <div className="username-phone-container">
         <Input
           type="text"
           id="user_name"
