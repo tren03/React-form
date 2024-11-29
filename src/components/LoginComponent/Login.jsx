@@ -3,7 +3,7 @@ import { Input } from "../InputComponent/Input";
 import { useState } from "react";
 import { Error } from "../ErrorComponent/Error";
 import { Forgot } from "../ForgotComponent/Forgot";
-export const Login = ({ mode, loginDeets, setLoginDeets }) => {
+export const Login = ({ setLogFlag, mode, loginDeets, setLoginDeets }) => {
   const [err, setErr] = useState({
     email: false,
     password: false,
@@ -65,7 +65,28 @@ export const Login = ({ mode, loginDeets, setLoginDeets }) => {
     if (flag === true) {
       return;
     } else {
+      // all details pass check, need to check for correct login via local storage
       console.log(loginDeets);
+
+      const userData = localStorage.getItem("user");
+
+      //user object doesnt exist in local storage
+      if (userData === null) {
+        console.log("wrong username password");
+      } else {
+        //user object exists, we need to check that now
+        const userObj = JSON.parse(userData);
+        if (
+          userObj.email === loginDeets.email &&
+          userObj.password === loginDeets.password
+        ) {
+          console.log("succesful login, redirect to profile page");
+          setLogFlag(true);
+        } else {
+          console.log("wrong username and password");
+        }
+      }
+
       setLoginDeets({
         email: "",
         password: "",
@@ -97,7 +118,9 @@ export const Login = ({ mode, loginDeets, setLoginDeets }) => {
         required={true}
         hasError={err.password ? true : false}
       />
-      {err.password === true && <Error error="Please Enter the password " />}
+      {err.password === true && (
+        <Error error="Enter a password greater than 6 characters " />
+      )}
       <Forgot />
 
       <div className="submitbutton-container">

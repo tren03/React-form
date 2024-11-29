@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Form } from "./components/FormComponent/Form";
+import { Profile } from "./components/ProfileComponent/Profile";
 
 function App() {
   const [mode, setMode] = useState("Login");
@@ -18,16 +19,23 @@ function App() {
     confirm_password: "",
   });
 
+  const [logFlag, setLogFlag] = useState(true);
+
   return (
     <div className="main-container">
-      <Form
-        mode={mode}
-        setMode={setMode}
-        loginDeets={loginDeets}
-        setLoginDeets={setLoginDeets}
-        signinDeets={signinDeets}
-        setSigninDeets={setSigninDeets}
-      />
+      {logFlag ? (
+        <Profile setLogFlag={setLogFlag} />
+      ) : (
+        <Form
+          setLogFlag={setLogFlag}
+          mode={mode}
+          setMode={setMode}
+          loginDeets={loginDeets}
+          setLoginDeets={setLoginDeets}
+          signinDeets={signinDeets}
+          setSigninDeets={setSigninDeets}
+        />
+      )}
     </div>
   );
 }

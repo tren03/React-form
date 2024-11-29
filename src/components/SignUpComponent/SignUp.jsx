@@ -2,7 +2,7 @@ import "./SignUp.css";
 import { useState } from "react";
 import { Error } from "../ErrorComponent/Error";
 import { Input } from "../InputComponent/Input";
-export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
+export const SignUp = ({ mode, setMode, signinDeets, setSigninDeets }) => {
   const [err, setErr] = useState({
     first_name: false,
     last_name: false,
@@ -20,6 +20,21 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
     }
     return false;
   }
+
+  function isPhoneValid() {
+    const regex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if (regex.test(signinDeets.phone)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // console.log(validatePhoneNumber("123-456-7890")); // true
+  // console.log(validatePhoneNumber("123.456.7890")); // true
+  // console.log(validatePhoneNumber("(123) 456-7890")); // true
+  // console.log(validatePhoneNumber("1234567890")); // true
+  // console.log(validatePhoneNumber("12345")); // false
 
   // if email is valid, returns true
   function isEmailValid() {
@@ -43,18 +58,6 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
       return false;
     }
   }
-
-  function formatPhoneNumber(phoneNumberString) {
-    var cleaned = ("" + phoneNumberString).replace(/\D/g, "");
-    var match = cleaned.match(/^(1|)?(\d{3})(\d{3})(\d{4})$/);
-    if (match) {
-      var intlCode = match[1] ? "+1 " : "";
-      return [intlCode, "(", match[2], ") ", match[3], "-", match[4]].join("");
-    }
-    return null;
-  }
-  // formatPhoneNumber("+12345678900"); // => "+1 (234) 567-8900"
-  // formatPhoneNumber("2345678900"); // => "(234) 567-8900"
 
   // if confirm pass is valid, returns true
   function isConfirmPassValid() {
@@ -106,6 +109,14 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
       copyErr.confirm_password = false;
     }
 
+    // if confirmpass is not valid, set err field to true
+    if (!isPhoneValid()) {
+      copyErr.phone = true;
+      flag = true;
+    } else {
+      copyErr.phone = false;
+    }
+
     // set error object
     setErr(copyErr);
     console.log(flag);
@@ -113,7 +124,11 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
     if (flag === true) {
       return;
     } else {
+      //sign up success
       console.log("reached");
+
+      localStorage.setItem("user", JSON.stringify(signinDeets));
+
       console.log(signinDeets);
       setSigninDeets({
         first_name: "",
@@ -124,18 +139,20 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
         phone: "",
         confirm_password: "",
       });
+      //redirect to login page after succesfull signin
+      setMode("Login");
     }
   }
 
   function handleChange(event) {
     let field = event.target.id;
     let value = event.target.value;
+    if (field === "phone") {
+      console.log("need to format");
+    }
     let copyLog = { ...signinDeets };
     copyLog[field] = value;
     setSigninDeets(copyLog);
-    if (field === "phone") {
-      console.log("hi phone");
-    }
     event.target.setCustomValidity("");
   }
 

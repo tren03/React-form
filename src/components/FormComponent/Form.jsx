@@ -7,6 +7,7 @@ import { Heading } from "../HeadingComponent/Heading";
 
 // We need to switch out the login component for the sign in component
 export const Form = ({
+  setLogFlag,
   mode,
   setMode,
   loginDeets,
@@ -21,6 +22,7 @@ export const Form = ({
       <form className="form-container">
         {mode === "Login" ? (
           <Login
+            setLogFlag={setLogFlag}
             mode={mode}
             loginDeets={loginDeets}
             setLoginDeets={setLoginDeets}
@@ -28,6 +30,7 @@ export const Form = ({
         ) : (
           <SignUp
             mode={mode}
+            setMode={setMode}
             signinDeets={signinDeets}
             setSigninDeets={setSigninDeets}
           />

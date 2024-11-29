@@ -5,3 +5,13 @@
   margin: 1rem 1rem 1rem 0rem;
   /* display: inline-block;  */
 }
+
+@media (max-width: 450px) {
+  .error {
+    color: red; /* Red color to indicate error */
+    font-size: 0.9rem; /* Reasonable font size */
+    font-weight: bold; /* Make the error stand out */
+    margin: 1rem 1rem 1rem 0rem;
+    /* display: inline-block;  */
+  }
+}
