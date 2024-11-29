@@ -1,14 +1,15 @@
 .form-outer-container {
   background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* border: 2px solid #007bff; */
   border-radius: 25px;
-  padding: 3rem;
+  padding: 1.5rem;
 }
+
 .form-container {
   /* width: 100%; */
   display: flex;

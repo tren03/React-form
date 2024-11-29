@@ -16,12 +16,12 @@
 }
 
 @media (max-width: 450px) {
-  .name-container {
+  .firstname-lastname-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
-  .phone-container {
+  .username-phone-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;

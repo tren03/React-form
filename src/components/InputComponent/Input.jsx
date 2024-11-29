@@ -9,6 +9,7 @@ export const Input = ({
   value,
   onChange,
   required = false,
+  hasError = false,
 }) => {
   return (
     <>
@@ -20,6 +21,7 @@ export const Input = ({
         value={value}
         onChange={onChange}
         required={required}
+        className={hasError ? "input-error" : ""}
       />
     </>
   );

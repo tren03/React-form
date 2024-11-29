@@ -1,4 +1,4 @@
-password hidden - passwords has to have _,@
-all validations triggered based on custom code
+done - password hidden - passwords has to have _,@
+done - all validations triggered based on custom code
 
 

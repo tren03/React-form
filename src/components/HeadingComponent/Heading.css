@@ -1,3 +1,12 @@
 .heading-container {
   margin-bottom: 1rem;
 }
+
+@media (max-width: 450px) {
+  .heading-container {
+    margin-bottom: 0.2rem;
+  }
+  h1 {
+    margin-top: 0rem;
+  }
+}

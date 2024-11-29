@@ -1,6 +1,5 @@
 import "./SignUp.css";
 import { useState } from "react";
-import { useEffect } from "react";
 import { Error } from "../ErrorComponent/Error";
 import { Input } from "../InputComponent/Input";
 export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
@@ -34,12 +33,28 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
 
   // is pass is valid, returns true
   function isPassValid() {
-    if (signinDeets.password.length >= 6) {
+    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@_])[A-Za-z\d@_]+$/;
+    if (
+      signinDeets.password.length >= 6 &&
+      passRegex.test(signinDeets.password)
+    ) {
       return true;
     } else {
       return false;
     }
   }
+
+  function formatPhoneNumber(phoneNumberString) {
+    var cleaned = ("" + phoneNumberString).replace(/\D/g, "");
+    var match = cleaned.match(/^(1|)?(\d{3})(\d{3})(\d{4})$/);
+    if (match) {
+      var intlCode = match[1] ? "+1 " : "";
+      return [intlCode, "(", match[2], ") ", match[3], "-", match[4]].join("");
+    }
+    return null;
+  }
+  // formatPhoneNumber("+12345678900"); // => "+1 (234) 567-8900"
+  // formatPhoneNumber("2345678900"); // => "(234) 567-8900"
 
   // if confirm pass is valid, returns true
   function isConfirmPassValid() {
@@ -118,6 +133,9 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
     let copyLog = { ...signinDeets };
     copyLog[field] = value;
     setSigninDeets(copyLog);
+    if (field === "phone") {
+      console.log("hi phone");
+    }
     event.target.setCustomValidity("");
   }
 
@@ -134,8 +152,8 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
             handleChange(event);
           }}
           required={true}
+          hasError={err.first_name ? true : false}
         />
-        {err.last_name === true && <Error error="First Name is empty" />}
         <Input
           type="text"
           id="last_name"
@@ -146,9 +164,9 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
             handleChange(event);
           }}
           required={true}
+          hasError={err.last_name ? true : false}
         />
       </div>
-      {err.last_name === true && <Error error="Last Name is empty" />}
       <div className="username-phone-container">
         <Input
           type="text"
@@ -160,8 +178,8 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
             handleChange(event);
           }}
           required={true}
+          hasError={err.user_name ? true : false}
         />
-        {err.user_name === true && <Error error="Username is empty" />}
         <Input
           type="tel"
           id="phone"
@@ -172,8 +190,8 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
             handleChange(event);
           }}
           required={true}
+          hasError={err.phone ? true : false}
         />
-        {err.phone === true && <Error error="Phone Number is empty" />}
       </div>
       <Input
         type="email"
@@ -185,6 +203,7 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
           handleChange(event);
         }}
         required={true}
+        hasError={err.email ? true : false}
       />
       {err.email === true && (
         <Error error="This email is invalid, check again." />
@@ -198,10 +217,11 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
         onChange={(event) => {
           handleChange(event);
         }}
+        hasError={err.password ? true : false}
         required={true}
       />
       {err.password === true && (
-        <Error error="This password has less than 6 letters. " />
+        <Error error="Password must have uppercase, lowercase, number, and @ or _." />
       )}
       <Input
         type="password"
@@ -212,6 +232,7 @@ export const SignUp = ({ mode, signinDeets, setSigninDeets }) => {
         onChange={(event) => {
           handleChange(event);
         }}
+        hasError={err.confirm_password ? true : false}
         required={true}
       />
       {err.confirm_password === true && (

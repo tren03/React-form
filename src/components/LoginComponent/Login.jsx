@@ -32,46 +32,45 @@ export const Login = ({ mode, loginDeets, setLoginDeets }) => {
 
   function isPassValid() {
     console.log(loginDeets.password);
-    if (loginDeets.password.length < 6) {
-      return false;
-    } else {
+    if (loginDeets.password.length >= 6) {
       return true;
+    } else {
+      return false;
     }
   }
 
   function submitForm(event) {
     event.preventDefault(); // Prevent default form submission behavior
 
+    //flag - false means there is no error
+    let flag = false;
+    let copyErr = { ...err };
+
     if (!isEmailValid()) {
-      let copyErr = { ...setErr };
       copyErr.email = true;
-      setErr(copyErr);
-      return;
+      flag = true;
     } else {
-      let copyErr = { ...setErr };
       copyErr.email = false;
-      setErr(copyErr);
     }
 
     if (!isPassValid()) {
-      let copyErr = { ...setErr };
       copyErr.password = true;
-      setErr(copyErr);
-      return;
+      flag = true;
     } else {
-      let copyErr = { ...setErr };
       copyErr.password = false;
-      setErr(copyErr);
     }
 
-    // If all checks pass, proceed
-    //     console.log("Form submitted successfully:", loginDeets);
+    setErr(copyErr);
 
-    console.log(loginDeets);
-    setLoginDeets({
-      email: "",
-      password: "",
-    });
+    if (flag === true) {
+      return;
+    } else {
+      console.log(loginDeets);
+      setLoginDeets({
+        email: "",
+        password: "",
+      });
+    }
   }
   return (
     <div className="login-container">
@@ -83,6 +82,7 @@ export const Login = ({ mode, loginDeets, setLoginDeets }) => {
         value={loginDeets.email}
         onChange={handleEmailChange}
         required={true}
+        hasError={err.email ? true : false}
       />
       {err.email === true && (
         <Error error="This email is invalid, check again." />
@@ -95,10 +95,9 @@ export const Login = ({ mode, loginDeets, setLoginDeets }) => {
         value={loginDeets.password}
         onChange={handlePassChange}
         required={true}
+        hasError={err.password ? true : false}
       />
-      {err.password === true && (
-        <Error error="This password has less than 6 letters. " />
-      )}
+      {err.password === true && <Error error="Please Enter the password " />}
       <Forgot />
 
       <div className="submitbutton-container">
