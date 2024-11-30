@@ -75,6 +75,7 @@ export const SignUp = ({ mode, setMode, signinDeets, setSigninDeets }) => {
     let copyErr = { ...err };
 
     let flag = false;
+    // cognitive complexity
 
     valToCheck.forEach((item) => {
       if (isEmpty(item)) {
@@ -127,6 +128,7 @@ export const SignUp = ({ mode, setMode, signinDeets, setSigninDeets }) => {
       //sign up success
       console.log("reached");
 
+      // need to handle error here
       localStorage.setItem("user", JSON.stringify(signinDeets));
 
       console.log(signinDeets);
