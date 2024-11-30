@@ -19,7 +19,7 @@ function App() {
     confirm_password: "",
   });
 
-  const [logFlag, setLogFlag] = useState(true);
+  const [logFlag, setLogFlag] = useState(false);
 
   return (
     <div className="main-container">
