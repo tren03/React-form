@@ -15,6 +15,7 @@ export const Login = () => {
   const [err, setErr] = useState({
     email: false,
     password: false,
+    wrongpassword: false,
   });
 
   return (
@@ -45,7 +46,9 @@ export const Login = () => {
       {err.password === true && (
         <Error error="Enter a password greater than 6 characters " />
       )}
-      {console.log(setLogFlag)}
+      {err.wrongpassword === true && (
+        <Error error="The email or password entered is wrong" />
+      )}
 
       {/* i cannot figure out why this logflag is not getting passed to forgot component*/}
       <Forgot />

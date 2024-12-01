@@ -45,6 +45,7 @@ function submitForm(event, loginDeets, setLoginDeets, err, setErr, setLogFlag) {
 
   if (!isPassValid(loginDeets.password)) {
     copyErr.password = true;
+    copyErr.wrongpassword = false;
     flag = true;
   } else {
     copyErr.password = false;
@@ -76,7 +77,10 @@ function submitForm(event, loginDeets, setLoginDeets, err, setErr, setLogFlag) {
             forgotPass: false,
           });
         } else {
-          console.log("wrong username and password");
+          console.log("wrong password");
+          copyErr.wrongpassword = true;
+          setErr(copyErr);
+          return;
         }
       }
     } catch (err) {
