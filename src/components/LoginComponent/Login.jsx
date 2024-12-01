@@ -1,6 +1,6 @@
 import "./Login.css";
 import { Input } from "../InputComponent/Input";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Error } from "../ErrorComponent/Error";
 import { Forgot } from "../ForgotComponent/Forgot";
 import {
@@ -8,7 +8,10 @@ import {
   handlePassChange,
   submitForm,
 } from "../../utils/LoginUtils";
-export const Login = ({ setLogFlag, mode, loginDeets, setLoginDeets }) => {
+import { GlobalContext } from "../../context/GlobalContext";
+export const Login = () => {
+  const { logFlag, setLogFlag, mode, loginDeets, setLoginDeets } =
+    useContext(GlobalContext);
   const [err, setErr] = useState({
     email: false,
     password: false,
@@ -25,7 +28,6 @@ export const Login = ({ setLogFlag, mode, loginDeets, setLoginDeets }) => {
         onChange={(event) =>
           handleEmailChange(event, loginDeets, setLoginDeets)
         }
-        required={true}
         hasError={err.email ? true : false}
       />
       {err.email === true && (
@@ -38,14 +40,15 @@ export const Login = ({ setLogFlag, mode, loginDeets, setLoginDeets }) => {
         placeholder="Password"
         value={loginDeets.password}
         onChange={(event) => handlePassChange(event, loginDeets, setLoginDeets)}
-        required={true}
         hasError={err.password ? true : false}
       />
       {err.password === true && (
         <Error error="Enter a password greater than 6 characters " />
       )}
-      <Forgot />
+      {console.log(setLogFlag)}
 
+      {/* i cannot figure out why this logflag is not getting passed to forgot component*/}
+      <Forgot />
       <div className="submitbutton-container">
         <button
           onClick={(event) =>

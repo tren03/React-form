@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../context/GlobalContext";
 import { Title } from "../Title/Title";
 import "./Switch.css";
 
-export const Switch = ({ mode, setMode }) => {
+export const Switch = () => {
+  const { mode, setMode } = useContext(GlobalContext);
   return (
-    // <div className="switch-container">
-    //   <Title titleText="Login" mode={mode} setMode={setMode} />
-    //   <Title titleText="SignUp" mode={mode} setMode={setMode} />
-    // </div>
     <>
       {mode === "Login" ? (
         <div className="switch-container">

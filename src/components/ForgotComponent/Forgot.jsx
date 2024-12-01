@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../context/GlobalContext";
 import "./Forgot.css";
 export const Forgot = () => {
+  const { setLogFlag } = useContext(GlobalContext);
   return (
     <div className="forgot-container">
-      <span> Forgot Password? </span>
+      <span
+        onClick={() => {
+          setLogFlag({
+            loginSuccess: false,
+            forgotPass: true,
+          });
+        }}
+      >
+        {" "}
+        Forgot Password?{" "}
+      </span>
     </div>
   );
 };

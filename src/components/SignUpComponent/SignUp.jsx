@@ -1,10 +1,11 @@
 import "./SignUp.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Error } from "../ErrorComponent/Error";
 import { Input } from "../InputComponent/Input";
 import { submitForm, handleChange } from "../../utils/SignUpUtils.js";
+import { GlobalContext } from "../../context/GlobalContext";
 
-export const SignUp = ({ mode, setMode, signinDeets, setSigninDeets }) => {
+export const SignUp = () => {
   const [err, setErr] = useState({
     first_name: false,
     last_name: false,
@@ -15,6 +16,8 @@ export const SignUp = ({ mode, setMode, signinDeets, setSigninDeets }) => {
     confirm_password: false,
   });
 
+  const { mode, setMode, signinDeets, setSigninDeets } =
+    useContext(GlobalContext);
   return (
     <div className="signin-container">
       <div className="firstname-lastname-container">
@@ -27,7 +30,6 @@ export const SignUp = ({ mode, setMode, signinDeets, setSigninDeets }) => {
           onChange={(event) => {
             handleChange(event, signinDeets, setSigninDeets);
           }}
-          required={true}
           hasError={err.first_name ? true : false}
         />
         <Input
@@ -39,7 +41,6 @@ export const SignUp = ({ mode, setMode, signinDeets, setSigninDeets }) => {
           onChange={(event) => {
             handleChange(event, signinDeets, setSigninDeets);
           }}
-          required={true}
           hasError={err.last_name ? true : false}
         />
       </div>
@@ -53,7 +54,6 @@ export const SignUp = ({ mode, setMode, signinDeets, setSigninDeets }) => {
           onChange={(event) => {
             handleChange(event, signinDeets, setSigninDeets);
           }}
-          required={true}
           hasError={err.user_name ? true : false}
         />
         <Input
@@ -65,7 +65,6 @@ export const SignUp = ({ mode, setMode, signinDeets, setSigninDeets }) => {
           onChange={(event) => {
             handleChange(event, signinDeets, setSigninDeets);
           }}
-          required={true}
           hasError={err.phone ? true : false}
         />
       </div>
@@ -78,7 +77,6 @@ export const SignUp = ({ mode, setMode, signinDeets, setSigninDeets }) => {
         onChange={(event) => {
           handleChange(event, signinDeets, setSigninDeets);
         }}
-        required={true}
         hasError={err.email ? true : false}
       />
       {err.email === true && (
@@ -94,7 +92,6 @@ export const SignUp = ({ mode, setMode, signinDeets, setSigninDeets }) => {
           handleChange(event, signinDeets, setSigninDeets);
         }}
         hasError={err.password ? true : false}
-        required={true}
       />
       {err.password === true && (
         <Error error="Password must have uppercase, lowercase, number, and @ or _." />
@@ -109,7 +106,6 @@ export const SignUp = ({ mode, setMode, signinDeets, setSigninDeets }) => {
           handleChange(event, signinDeets, setSigninDeets);
         }}
         hasError={err.confirm_password ? true : false}
-        required={true}
       />
       {err.confirm_password === true && (
         <Error error="The passwords do not match" />

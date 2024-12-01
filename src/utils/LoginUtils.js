@@ -71,7 +71,10 @@ function submitForm(event, loginDeets, setLoginDeets, err, setErr, setLogFlag) {
           userObj.password === loginDeets.password
         ) {
           console.log("succesful login, redirect to profile page");
-          setLogFlag(true);
+          setLogFlag({
+            loginSuccess: true,
+            forgotPass: false,
+          });
         } else {
           console.log("wrong username and password");
         }

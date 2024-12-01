@@ -1,7 +1,11 @@
 import "./Profile.css";
+import { useContext } from "react";
 import React from "react";
+import { GlobalContext } from "../../context/GlobalContext";
 
-export const Profile = ({ setLogFlag }) => {
+export const Profile = () => {
+  const { setLogFlag } = useContext(GlobalContext); // Accessing context value
+
   const userData = localStorage.getItem("user");
   const userObj = JSON.parse(userData);
   console.log("succesful login, redirect to profile page");
@@ -14,7 +18,10 @@ export const Profile = ({ setLogFlag }) => {
         <div className="submitbutton-container">
           <button
             onClick={() => {
-              setLogFlag(false);
+              setLogFlag({
+                loginSuccess: false,
+                forgotPass: false,
+              });
             }}
           >
             Logout
