@@ -9,6 +9,7 @@ import {
   submitForm,
 } from "../../utils/LoginUtils";
 import { GlobalContext } from "../../context/GlobalContext";
+import { useNavigate } from "react-router";
 export const Login = () => {
   const { logFlag, setLogFlag, mode, loginDeets, setLoginDeets } =
     useContext(GlobalContext);
@@ -17,6 +18,8 @@ export const Login = () => {
     password: false,
     wrongpassword: false,
   });
+
+  let navigate = useNavigate();
 
   return (
     <div className="login-container">
@@ -39,6 +42,7 @@ export const Login = () => {
         id="password"
         name="password"
         placeholder="Password"
+        autoComplete="current-password"
         value={loginDeets.password}
         onChange={(event) => handlePassChange(event, loginDeets, setLoginDeets)}
         hasError={err.password ? true : false}
@@ -62,6 +66,7 @@ export const Login = () => {
               err,
               setErr,
               setLogFlag,
+              navigate,
             )
           }
         >

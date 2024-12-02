@@ -23,7 +23,7 @@ input:focus {
 /* Placeholder Text */
 input::placeholder {
   color: #aaa; /* Light gray placeholder for readability */
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 input.input-error {

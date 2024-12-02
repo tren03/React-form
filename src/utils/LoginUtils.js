@@ -29,7 +29,15 @@ function isPassValid(password) {
   }
 }
 
-function submitForm(event, loginDeets, setLoginDeets, err, setErr, setLogFlag) {
+function submitForm(
+  event,
+  loginDeets,
+  setLoginDeets,
+  err,
+  setErr,
+  setLogFlag,
+  navigate,
+) {
   event.preventDefault(); // Prevent default form submission behavior
 
   //flag - false means there is no error
@@ -72,10 +80,9 @@ function submitForm(event, loginDeets, setLoginDeets, err, setErr, setLogFlag) {
           userObj.password === loginDeets.password
         ) {
           console.log("succesful login, redirect to profile page");
-          setLogFlag({
-            loginSuccess: true,
-            forgotPass: false,
-          });
+          // navigate to profile page
+
+          navigate("/profile");
         } else {
           console.log("wrong password");
           copyErr.wrongpassword = true;

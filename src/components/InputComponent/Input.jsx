@@ -10,6 +10,7 @@ export const Input = ({
   onChange,
   required = false,
   hasError = false,
+  autoComplete = "",
 }) => {
   return (
     <>
@@ -21,6 +22,7 @@ export const Input = ({
         value={value}
         onChange={onChange}
         required={required}
+        autoComplete={autoComplete}
         className={hasError ? "input-error" : ""}
       />
     </>

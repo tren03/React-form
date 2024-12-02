@@ -18,10 +18,10 @@ export const GlobalContextProvider = ({ children }) => {
     confirm_password: "",
   });
 
-  const [logFlag, setLogFlag] = useState({
-    loginSuccess: false,
-    forgotPass: false,
-  });
+  // const [logFlag, setLogFlag] = useState({
+  //   loginSuccess: false,
+  //   forgotPass: false,
+  // });
 
   return (
     <GlobalContext.Provider
@@ -32,8 +32,8 @@ export const GlobalContextProvider = ({ children }) => {
         setLoginDeets,
         signinDeets,
         setSigninDeets,
-        logFlag,
-        setLogFlag,
+        // logFlag,
+        // setLogFlag,
       }}
     >
       {children}

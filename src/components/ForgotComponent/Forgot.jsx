@@ -1,16 +1,14 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router";
 import { GlobalContext } from "../../context/GlobalContext";
 import "./Forgot.css";
 export const Forgot = () => {
-  const { setLogFlag } = useContext(GlobalContext);
+  let navigate = useNavigate();
   return (
     <div className="forgot-container">
       <span
         onClick={() => {
-          setLogFlag({
-            loginSuccess: false,
-            forgotPass: true,
-          });
+          navigate("/forgotpass");
         }}
       >
         {" "}
