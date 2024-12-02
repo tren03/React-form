@@ -9,3 +9,12 @@ after login, if successful,
 
 put a trim for email, error should dissapear once the input is vaidated on change
 
+
+TODO app
+useeffect on first load -> call api and get tasks from api
+add a navbar with details about login user
+
+3 categories
+pending 
+inprogress 
+todo

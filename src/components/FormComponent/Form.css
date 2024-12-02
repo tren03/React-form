@@ -1,6 +1,6 @@
 .form-outer-container {
   background-color: rgba(255, 255, 255, 0.8);
-  width: 100%;
+  width: 50%;
   height: fit-content;
   display: flex;
   align-items: center;
@@ -16,4 +16,14 @@
   flex-direction: column;
   width: 100%;
   margin: 0;
+}
+
+@media (max-width: 767px) {
+  .form-outer-container {
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
