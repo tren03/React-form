@@ -1,0 +1,8 @@
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}

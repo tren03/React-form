@@ -1,4 +1,7 @@
 .task-shell {
   display: flex;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 8px;
   width: 100%;
 }

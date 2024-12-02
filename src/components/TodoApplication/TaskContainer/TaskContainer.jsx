@@ -5,6 +5,10 @@ export const TaskContainer = () => {
     <div className="task-container">
       <Task />
       <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
     </div>
   );
 };

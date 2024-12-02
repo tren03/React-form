@@ -1,5 +1,6 @@
 import React from "react";
 import { TaskContextProvider } from "../../../context/TaskContext";
+import { Modal } from "../Modal/Modal";
 import { NavBar } from "../NavBar/NavBar";
 import { TodoContainer } from "../TodoContainer/TodoContainer";
 import "./Todo.css";
@@ -10,6 +11,7 @@ export const Todo = () => {
     <TaskContextProvider>
       <div className="todo-outer-container">
         <NavBar />
+        <Modal />
         <TodoContainer />
       </div>
     </TaskContextProvider>

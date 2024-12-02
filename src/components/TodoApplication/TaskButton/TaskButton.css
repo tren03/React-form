@@ -4,7 +4,7 @@
   font-weight: bold; /* Make text bold */
   color: #fff; /* Text color */
   background-color: #007bff; /* Button background color */
-  border-radius: 8px;
+  border-radius: 25px;
   border: none; /* Remove default border */
   cursor: pointer; /* Pointer cursor on hover */
 }

@@ -15,11 +15,15 @@ export const TaskContextProvider = ({ children }) => {
     },
   ]);
 
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <TaskContext.Provider
       value={{
         tasks,
         setTasks,
+        showModal,
+        setShowModal,
       }}
     >
       {children}

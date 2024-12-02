@@ -10,7 +10,7 @@ select {
   color: #333; /* Ensures the text is visible */
   background-color: #fff; /* White background for contrast */
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 25px;
   outline: none;
   transition:
     border-color 0.3s ease,
