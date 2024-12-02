@@ -1,0 +1,9 @@
+.task-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.task-info-container h3 {
+  margin: 0;
+}

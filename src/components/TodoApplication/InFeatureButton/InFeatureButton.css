@@ -1,0 +1,13 @@
+.in-feature-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  font-weight: bold; /* Make text bold */
+  border-radius: 8px;
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.in-feature-button-container button {
+}
