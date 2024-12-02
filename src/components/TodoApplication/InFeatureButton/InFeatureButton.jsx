@@ -1,8 +1,10 @@
 import "./InFeatureButton.css";
-export const InFeatureButton = ({ action }) => {
+export const InFeatureButton = ({ action, image }) => {
   return (
     <div className="in-feature-button-container">
-      <button> {action}</button>
+      <button>
+        <img src={image} alt={action} /> {/* Display the icon/image */}
+      </button>
     </div>
   );
 };

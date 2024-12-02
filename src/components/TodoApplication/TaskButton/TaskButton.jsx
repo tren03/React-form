@@ -1,12 +1,10 @@
-import React, { useContext } from "react";
-import { TaskContext } from "../../../context/TaskContext";
+import React from "react";
 import "./TaskButton.css";
 
-export const TaskButton = ({ buttonText }) => {
-  const { showModal, setShowModal } = useContext(TaskContext);
+export const TaskButton = ({ buttonText, handleClick }) => {
   return (
-    <div className="task-button-container">
-      <button onClick={() => setShowModal(true)}>{buttonText}</button>
+    <div className="task-button-container" onClick={handleClick}>
+      <button>{buttonText}</button>
     </div>
   );
 };

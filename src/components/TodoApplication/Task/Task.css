@@ -5,3 +5,15 @@
   border-radius: 8px;
   width: 100%;
 }
+
+.feature-buttons {
+  display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 450px) {
+  .feature-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}
