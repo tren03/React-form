@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { TaskContext } from "../../../context/TaskContext";
 import "./InFeatureButton.css";
 export const InFeatureButton = ({ action, image, id }) => {
-  const { tasks, setTasks } = useContext(TaskContext);
+  const { tasks, setTasks, setShowModal } = useContext(TaskContext);
 
   async function delete_task(taskId) {
     try {
@@ -30,8 +30,14 @@ export const InFeatureButton = ({ action, image, id }) => {
     }
   }
 
+  function update_task(taskId) {
+    setShowModal(true);
+    console.log(taskId);
+  }
+
   let handleActionClick;
   if (action === "update") {
+    handleActionClick = update_task;
   }
   if (action === "delete") {
     handleActionClick = delete_task;

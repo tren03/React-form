@@ -1,8 +1,10 @@
 .select-container {
   width: 100%;
+  /* height: fit-content; */
 }
 /* Input Field Styling */
 select {
+  z-index: 3;
   text-align: center;
   width: 100%;
   padding-top: 1rem;
@@ -15,8 +17,6 @@ select {
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease;
-  -webkit-appearance: none; /* Safari and Chrome */
-  appearance: none;
 }
 
 /* Focus State */
@@ -31,17 +31,17 @@ select:placeholder {
   font-size: 1rem;
 }
 
-@media (max-width: 450px) {
-  input {
-    width: 100%;
-    padding: 0.7rem;
-    color: #333; /* Ensures the text is visible */
-    background-color: #fff; /* White background for contrast */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    transition:
-      border-color 0.3s ease,
-      box-shadow 0.3s ease;
-  }
-}
+/* @media (max-width: 450px) { */
+/*   select { */
+/*     width: 100%; */
+/*     padding: 0.7rem; */
+/*     color: #333; /* Ensures the text is visible */
+/*     background-color: #fff; /* White background for contrast */
+/*     border: 1px solid #ccc; */
+/*     border-radius: 4px; */
+/*     outline: none; */
+/*     transition: */
+/*       border-color 0.3s ease, */
+/*       box-shadow 0.3s ease; */
+/*   } */
+/* } */

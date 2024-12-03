@@ -1,19 +1,20 @@
 import { useContext, useEffect, useState } from "react";
 import { TaskContext } from "../../../context/TaskContext";
 import { ModalField } from "../ModalField/ModalField";
+import { SelectInput } from "../SelectInput/SelectInput";
 import { TaskButton } from "../TaskButton/TaskButton";
 import "./ModalInfo.css";
 
 // in case we call model info for updating,this information should be pre filled
 export const ModalInfo = ({ title = "", description = "", category = "" }) => {
-  const { tasks, setTasks, setShowModal } = useContext(TaskContext);
+  const { tasks, setGlobalTasks, setTasks, setShowModal } =
+    useContext(TaskContext);
 
   const [err, setErr] = useState({
     title: false,
     desc: false,
     category: false,
   });
-  const [addFlag, setAddFlag] = useState(true);
 
   const [localModalDeets, setLocalModalDeets] = useState({
     title: title,
@@ -40,6 +41,7 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
 
       // Update the tasks list with the updated data
       setTasks(updatedTasks);
+      setGlobalTasks(updatedTasks);
 
       // Close the modal after adding the task
       setShowModal(false);
@@ -48,14 +50,14 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
     }
   }
 
-  console.log("from modal :", tasks);
-
+  // check if all fields have values
   function handleAddTask() {
-    // check if all fields have values
-
     let flag = false;
     let copyErr = { ...err };
     for (let field in localModalDeets) {
+      if (localModalDeets[field] === "" && field === "category") {
+        localModalDeets[field] = "Low Priority";
+      }
       if (localModalDeets[field] === "") {
         copyErr[field] = true;
         flag = true;
@@ -92,6 +94,13 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
     }
   }
 
+  function getLocalModalDeetsCategory(e) {
+    setLocalModalDeets({
+      ...localModalDeets,
+      category: e.target.value, // Update the category value from the select
+    });
+  }
+
   return (
     <div className="modal-info-container">
       <ModalField
@@ -114,16 +123,14 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
         setlocalModalDeets={setLocalModalDeets}
         hasError={err.description ? true : false}
       />
-      <ModalField
-        type="text"
-        name="category"
-        id="category"
-        placeholder="Category of the task"
-        value={localModalDeets.category}
-        localModalDeets={localModalDeets}
-        setlocalModalDeets={setLocalModalDeets}
-        hasError={err.category ? true : false}
-      />
+      <div className="modal-info-select-container">
+        <label> Category </label>
+        <SelectInput
+          className="modal-info-select"
+          handleChange={getLocalModalDeetsCategory}
+          optionList={["Low Priority", "Medium Priority", "High Priority"]}
+        />
+      </div>
       <TaskButton
         buttonText="Create/Update"
         handleClick={() => handleAddTask()}
@@ -131,3 +138,13 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
     </div>
   );
 };
+// <ModalField
+//   type="text"
+//   name="category"
+//   id="category"
+//   placeholder="Category of the task"
+//   value={localModalDeets.category}
+//   localModalDeets={localModalDeets}
+//   setlocalModalDeets={setLocalModalDeets}
+//   hasError={err.category ? true : false}
+// />
