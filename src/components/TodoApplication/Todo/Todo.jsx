@@ -5,7 +5,8 @@ import { NavBar } from "../NavBar/NavBar";
 import { TodoContainer } from "../TodoContainer/TodoContainer";
 import "./Todo.css";
 
-// We need to switch out the login component for the sign in component
+// We need to get the data from the python api endpoint
+
 export const Todo = () => {
   return (
     <TaskContextProvider>
