@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { TaskContext } from "../../../context/TaskContext";
 import { ModalField } from "../ModalField/ModalField";
 import { TaskButton } from "../TaskButton/TaskButton";
@@ -7,11 +7,13 @@ import "./ModalInfo.css";
 // in case we call model info for updating,this information should be pre filled
 export const ModalInfo = ({ title = "", description = "", category = "" }) => {
   const { tasks, setTasks, setShowModal } = useContext(TaskContext);
+
   const [err, setErr] = useState({
     title: false,
     desc: false,
     category: false,
   });
+  const [addFlag, setAddFlag] = useState(true);
 
   const [localModalDeets, setLocalModalDeets] = useState({
     title: title,
@@ -19,8 +21,35 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
     category: category,
   });
 
+  async function add_new_task(newTask) {
+    try {
+      const response = await fetch("http://localhost:8000/add_task", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newTask), // Send the task data in JSON format
+      });
+
+      if (!response.ok) {
+        throw new Error("Error adding task");
+      }
+
+      // Parse the response JSON
+      const updatedTasks = await response.json();
+
+      // Update the tasks list with the updated data
+      setTasks(updatedTasks);
+
+      // Close the modal after adding the task
+      setShowModal(false);
+    } catch (err) {
+      console.log("Error while adding task:", err);
+    }
+  }
+
   console.log("from modal :", tasks);
-  console.log(setTasks);
+
   function handleAddTask() {
     // check if all fields have values
 
@@ -41,14 +70,24 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
     } else {
       console.log("yes you can update");
       // create object and update tasks
-      let copyTasks = [...tasks];
-      console.log("copytask : ", copyTasks);
-      copyTasks.push({
+      console.log("local deets are here,", localModalDeets);
+
+      // do api req
+
+      //id added by db itself
+      let newTask = {
         taskTitle: localModalDeets.title,
         taskDescription: localModalDeets.description,
         taskCategory: localModalDeets.category,
-      });
-      setTasks(copyTasks);
+      };
+
+      add_new_task(newTask);
+      // copyTasks.push({
+      //   taskTitle: localModalDeets.title,
+      //   taskDescription: localModalDeets.description,
+      //   taskCategory: localModalDeets.category,
+      // });
+      // setTasks(copyTasks);
       setShowModal(false);
     }
   }
