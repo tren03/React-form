@@ -18,6 +18,11 @@ export const TaskContextProvider = ({ children }) => {
 
   const [showModal, setShowModal] = useState(false);
 
+  const [updateFlag, setUpdateFlag] = useState({
+    isUpdate: false,
+    taskId: null,
+  });
+
   return (
     <TaskContext.Provider
       value={{
@@ -29,6 +34,8 @@ export const TaskContextProvider = ({ children }) => {
         setShowModal,
         categories,
         setCategories,
+        updateFlag,
+        setUpdateFlag,
       }}
     >
       {children}

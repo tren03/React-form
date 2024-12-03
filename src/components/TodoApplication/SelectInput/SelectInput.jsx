@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { TaskContext } from "../../../context/TaskContext";
 import "./SelectInput.css";
 import { SelectOption } from "./SelectOption";
-export const SelectInput = ({ optionList, handleChange }) => {
+export const SelectInput = ({ optionList, handleChange, value }) => {
   // the options are the categories, from globalTasks, get all uniqe categories and display them
   const { categories } = useContext(TaskContext);
   if (!optionList) {
@@ -11,7 +11,7 @@ export const SelectInput = ({ optionList, handleChange }) => {
 
   return (
     <div className="select-container">
-      <select className="select-button" onChange={handleChange}>
+      <select className="select-button" onChange={handleChange} value={value}>
         {optionList.map((item, index) => {
           return <SelectOption key={index} value={item} />;
         })}

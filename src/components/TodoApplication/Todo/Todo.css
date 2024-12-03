@@ -1,10 +1,22 @@
 .todo-outer-container {
   /* background-color: rgba(255, 255, 255, 0.8); */
-  width: 100%;
+  width: 70%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   gap: 0.8rem;
+}
+@media (max-width: 767px) {
+  .todo-outer-container {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 }

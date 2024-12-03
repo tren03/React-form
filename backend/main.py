@@ -148,3 +148,49 @@ async def delete_task(id: int):
 
     finally:
         conn.close()
+
+
+@app.post("/update_task")
+async def update_task(id: int, task: Task):
+    conn = get_db_conn()
+    if not conn:
+        return {"error": "Error getting data from db"}
+
+    try:
+        cursor = conn.cursor()
+
+        # Update the task in the database based on the provided taskId
+        cursor.execute(
+            """
+            UPDATE tasks
+            SET taskTitle = ?, taskDescription = ?, taskCategory = ?
+            WHERE taskId = ?
+            """,
+            (task.taskTitle, task.taskDescription, task.taskCategory, id),
+        )
+
+        # Commit the changes
+        conn.commit()
+
+        # Get the updated list of tasks after update
+        cursor.execute("SELECT * FROM tasks")
+        rows = cursor.fetchall()
+
+        # Create a list of Task objects from the rows
+        tasks_list = [
+            Task(
+                taskId=row[0],
+                taskTitle=row[1],
+                taskDescription=row[2],
+                taskCategory=row[3],
+            )
+            for row in rows
+        ]
+
+        return tasks_list  # Return the updated list of tasks
+
+    except sqlite3.Error as e:
+        return {"error": f"Database error: {e}"}
+
+    finally:
+        conn.close()

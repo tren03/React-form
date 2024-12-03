@@ -7,20 +7,84 @@ import "./ModalInfo.css";
 
 // in case we call model info for updating,this information should be pre filled
 export const ModalInfo = ({ title = "", description = "", category = "" }) => {
-  const { tasks, setGlobalTasks, setTasks, setShowModal } =
-    useContext(TaskContext);
+  const {
+    tasks,
+    globalTasks,
+    setGlobalTasks,
+    setTasks,
+    setShowModal,
+    updateFlag,
+    setUpdateFlag,
+  } = useContext(TaskContext);
 
+  useEffect(() => {
+    if (updateFlag.isUpdate) {
+      const taskToUpdate = globalTasks.find(
+        (task) => task.taskId === updateFlag.taskId,
+      );
+      if (taskToUpdate) {
+        setLocalModalDeets({
+          title: taskToUpdate.taskTitle, // Ensure correct key names for your task
+          description: taskToUpdate.taskDescription,
+          category: taskToUpdate.taskCategory,
+        });
+      }
+    }
+  }, [updateFlag, globalTasks]);
   const [err, setErr] = useState({
     title: false,
     desc: false,
     category: false,
   });
 
+  // used to update Task when updateTask.isUpdate === true
+  const updateTask = async (id, updatedTask) => {
+    try {
+      const response = await fetch(
+        `http://localhost:8000/update_task?id=${id}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedTask), // Send updated task as JSON
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Error updating task");
+      }
+
+      // Parse the response JSON to get the updated list of tasks
+      const updatedTasks = await response.json();
+      setGlobalTasks(updatedTasks);
+      setTasks(updatedTasks);
+    } catch (err) {
+      console.log("Error while updating task:", err);
+    }
+  };
+
   const [localModalDeets, setLocalModalDeets] = useState({
     title: title,
     description: description,
     category: category,
   });
+
+  // console.log(updateFlag);
+  // if (updateFlag.isUpdate) {
+  //   const taskToUpdate = globalTasks.find(
+  //     (task) => task.taskId === updateFlag.taskId,
+  //   );
+  //   console.log(taskToUpdate);
+  //
+  //   let copyLocal = {
+  //     title: taskToUpdate.title,
+  //     description: taskToUpdate.description,
+  //     category: taskToUpdate.category,
+  //   };
+  //
+  //   setLocalModalDeets(copyLocal);
+  // }
 
   async function add_new_task(newTask) {
     try {
@@ -51,7 +115,7 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
   }
 
   // check if all fields have values
-  function handleAddTask() {
+  function handleAddUpdateTask() {
     let flag = false;
     let copyErr = { ...err };
     for (let field in localModalDeets) {
@@ -70,7 +134,7 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
     if (flag === true) {
       console.log("fields not filled, do not update state");
     } else {
-      console.log("yes you can update");
+      console.log("yes you can add/update");
       // create object and update tasks
       console.log("local deets are here,", localModalDeets);
 
@@ -83,7 +147,15 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
         taskCategory: localModalDeets.category,
       };
 
-      add_new_task(newTask);
+      if (updateFlag.isUpdate === true) {
+        updateTask(updateFlag.taskId, newTask);
+        let copyUpdateFlag = { ...updateFlag };
+        copyUpdateFlag.isUpdate = false;
+        copyUpdateFlag.taskId = null;
+        setUpdateFlag(copyUpdateFlag);
+      } else {
+        add_new_task(newTask);
+      }
       // copyTasks.push({
       //   taskTitle: localModalDeets.title,
       //   taskDescription: localModalDeets.description,
@@ -129,11 +201,12 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
           className="modal-info-select"
           handleChange={getLocalModalDeetsCategory}
           optionList={["Low Priority", "Medium Priority", "High Priority"]}
+          value={updateFlag ? localModalDeets.category : "Low Priority"}
         />
       </div>
       <TaskButton
         buttonText="Create/Update"
-        handleClick={() => handleAddTask()}
+        handleClick={() => handleAddUpdateTask()}
       />
     </div>
   );
