@@ -81,8 +81,8 @@ function submitForm(
         ) {
           console.log("succesful login, redirect to profile page");
           // navigate to profile page
-
-          navigate("/profile");
+          localStorage.setItem("isLoggedIn", "true");
+          navigate("/todo");
         } else {
           console.log("wrong password");
           copyErr.wrongpassword = true;

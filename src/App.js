@@ -8,9 +8,6 @@ import { Forgot } from "./components/ForgotComponent/Forgot";
 import { Todo } from "./components/TodoApplication/Todo/Todo";
 
 function App() {
-  const { logFlag } = useContext(GlobalContext);
-  // {logFlag.loginSuccess ? <Profile /> : <Form />}
-
   return (
     <BrowserRouter>
       <div className="main-container">

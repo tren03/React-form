@@ -54,7 +54,6 @@ export const Login = () => {
         <Error error="The email or password entered is wrong" />
       )}
 
-      {/* i cannot figure out why this logflag is not getting passed to forgot component*/}
       <Forgot />
       <div className="submitbutton-container">
         <button

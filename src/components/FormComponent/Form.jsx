@@ -12,13 +12,11 @@ export const Form = () => {
 
   return (
     <div className="form-outer-container">
-      <>
-        <Heading />
-        <Switch />
-        <form className="form-container">
-          {mode === "Login" ? <Login /> : <SignUp />}
-        </form>
-      </>
+      <Heading />
+      <Switch />
+      <form className="form-container">
+        {mode === "Login" ? <Login /> : <SignUp />}
+      </form>
     </div>
   );
 };

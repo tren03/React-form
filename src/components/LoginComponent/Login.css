@@ -15,4 +15,5 @@
   background-color: #007bff; /* Button background color */
   border: none; /* Remove default border */
   cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 8px;
 }
