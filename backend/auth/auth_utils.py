@@ -1,5 +1,5 @@
 from backend.db.user_operations import get_user_by_email
-from backend.errors.error import EmailNotFoundErr
+from backend.errors.error import UserNotFound
 from backend.models.model import LoginDetails
 
 

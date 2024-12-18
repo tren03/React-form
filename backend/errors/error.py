@@ -19,10 +19,9 @@ class DuplicateUserError(CustomError):
         return "User with this email already exists."
 
 
-# for login when email not found
-class EmailNotFoundErr(CustomError):
+class UserNotFound(CustomError):
     def message(self) -> str:
-        return "User email not found during login"
+        return "User not found"
 
 
 # when conversion from Alchemy to Pydantic fails
@@ -35,3 +34,8 @@ class AlchemyToPydanticErr(CustomError):
 class PydanticToAlchemyErr(CustomError):
     def message(self) -> str:
         return "PydanticToAlchemy failed"
+
+
+class TaskAdditionError(CustomError):
+    def message(self) -> str:
+        return "Error while adding task"

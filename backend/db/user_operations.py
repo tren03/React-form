@@ -4,7 +4,7 @@ from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 from backend.db.conversions import user_alchemy_to_pydantic, user_pydantic_to_alchemy
 from backend.db.db_connection import get_session
-from backend.errors.error import DuplicateUserError, EmailNotFoundErr
+from backend.errors.error import DuplicateUserError, UserNotFound
 from backend.models.model import User as PyUser
 from backend.db.migrations import User
 
@@ -26,6 +26,8 @@ def add_user(user_to_add: PyUser, session: Session) -> None | Exception:
             raise DuplicateUserError
 
         sql_alchemy_user_to_add = user_pydantic_to_alchemy(user_to_add)
+        if isinstance(sql_alchemy_user_to_add, Exception):
+            raise sql_alchemy_user_to_add
         session.add(sql_alchemy_user_to_add)
         session.commit()
 
@@ -55,8 +57,8 @@ def get_user_by_email(email: str) -> PyUser | Exception:
         if user:
             return user_alchemy_to_pydantic(user)
         else:
-            raise EmailNotFoundErr
-    except EmailNotFoundErr as e:
+            raise UserNotFound
+    except UserNotFound as e:
         print(f"Login email address not found in database", e)
         return e
     except Exception as e:

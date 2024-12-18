@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, status
 from starlette.status import HTTP_401_UNAUTHORIZED, HTTP_403_FORBIDDEN
 from backend.auth.auth_utils import verify_login
 from backend.db.user_operations import add_user, get_user_by_email
-from backend.errors.error import DuplicateUserError, EmailNotFoundErr
+from backend.errors.error import DuplicateUserError, UserNotFound
 from backend.models.model import LoginDetails, User
 from backend.db.db_connection import get_session
 
