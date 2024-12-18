@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from backend.model import Task
-from backend.db import get_db_conn
+from backend.models.model import Task
+from backend.db.db_connection import get_db_conn
 import sqlite3
 
 router = APIRouter()
