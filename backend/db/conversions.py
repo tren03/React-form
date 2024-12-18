@@ -1,9 +1,10 @@
 from backend.db.migrations import User
+from backend.errors.error import AlchemyToPydanticErr, PydanticToAlchemyErr
 from backend.models.model import User as PyUser
 import uuid
 
 
-def user_alchemy_to_pydantic(alchemy_user: User) -> PyUser | None:
+def user_alchemy_to_pydantic(alchemy_user: User) -> PyUser | Exception:
     """
     Takes sqlalchemy user object and converts to pydantic user model
     Returns None if the conversion fails.
@@ -17,14 +18,13 @@ def user_alchemy_to_pydantic(alchemy_user: User) -> PyUser | None:
             email=alchemy_user.email,
             password=alchemy_user.password,
         )
+        return pydantic_user
     except Exception as e:
         print("somthing went wrong while conversion from alchemy to pydantic model ", e)
-        return None
-
-    return pydantic_user
+        return AlchemyToPydanticErr()
 
 
-def user_pydantic_to_alchemy(pydantic_user: PyUser) -> User | None:
+def user_pydantic_to_alchemy(pydantic_user: PyUser) -> User | Exception:
     """
     Takes pydantic user object and converts to sqlalchemy user model.
     Returns None if the conversion fails.
@@ -39,8 +39,7 @@ def user_pydantic_to_alchemy(pydantic_user: PyUser) -> User | None:
             email=pydantic_user.email,
             password=pydantic_user.password,
         )
+        return sql_alchemy_user
     except Exception as e:
         print("somthing went wrong while conversion from pydantic to alchemy model ", e)
-        return None
-
-    return sql_alchemy_user
+        return PydanticToAlchemyErr()

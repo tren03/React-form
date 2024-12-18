@@ -17,3 +17,21 @@ class CustomError(ABC, Exception):
 class DuplicateUserError(CustomError):
     def message(self) -> str:
         return "User with this email already exists."
+
+
+# for login when email not found
+class EmailNotFoundErr(CustomError):
+    def message(self) -> str:
+        return "User email not found during login"
+
+
+# when conversion from Alchemy to Pydantic fails
+class AlchemyToPydanticErr(CustomError):
+    def message(self) -> str:
+        return "AlchemyPydanticConversion failed"
+
+
+# when conversion from Alchemy to Pydantic fails
+class PydanticToAlchemyErr(CustomError):
+    def message(self) -> str:
+        return "PydanticToAlchemy failed"

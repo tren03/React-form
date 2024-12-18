@@ -1,9 +1,10 @@
-from sqlite3 import Error
 import uuid
+from sqlalchemy import select
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
-from backend.db.conversions import user_pydantic_to_alchemy
-from backend.errors.error import DuplicateUserError
+from backend.db.conversions import user_alchemy_to_pydantic, user_pydantic_to_alchemy
+from backend.db.db_connection import get_session
+from backend.errors.error import DuplicateUserError, EmailNotFoundErr
 from backend.models.model import User as PyUser
 from backend.db.migrations import User
 
@@ -25,16 +26,6 @@ def add_user(user_to_add: PyUser, session: Session) -> None | Exception:
             raise DuplicateUserError
 
         sql_alchemy_user_to_add = user_pydantic_to_alchemy(user_to_add)
-
-        # sql_alchemy_user_to_add = User(
-        #     user_id=str(uuid.uuid4()),
-        #     first_name=user_to_add.first_name,
-        #     last_name=user_to_add.last_name,
-        #     user_name=user_to_add.user_name,
-        #     phone=user_to_add.phone,
-        #     email=user_to_add.email,
-        #     password=user_to_add.password,
-        # )
         session.add(sql_alchemy_user_to_add)
         session.commit()
 
@@ -51,9 +42,23 @@ def add_user(user_to_add: PyUser, session: Session) -> None | Exception:
         return e
 
 
-def get_user_by_email(email: str):
+def get_user_by_email(email: str) -> PyUser | Exception:
     """
     Gets a user by email
-
+    return pydantic User model or error if user not found
     """
-    pass
+    try:
+        stmt = select(User).where(User.email == email).limit(1)
+        session = get_session()
+        result = session.execute(stmt)
+        user = result.scalars().first()
+        if user:
+            return user_alchemy_to_pydantic(user)
+        else:
+            raise EmailNotFoundErr
+    except EmailNotFoundErr as e:
+        print(f"Login email address not found in database", e)
+        return e
+    except Exception as e:
+        print(f"Something went wrong while getting email of user for login checking", e)
+        return e

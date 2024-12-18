@@ -1,6 +1,8 @@
 from fastapi import APIRouter, HTTPException, status
-from backend.db.operations import add_user
-from backend.errors.error import DuplicateUserError
+from starlette.status import HTTP_401_UNAUTHORIZED, HTTP_403_FORBIDDEN
+from backend.auth.auth_utils import verify_login
+from backend.db.user_operations import add_user, get_user_by_email
+from backend.errors.error import DuplicateUserError, EmailNotFoundErr
 from backend.models.model import LoginDetails, User
 from backend.db.db_connection import get_session
 
@@ -45,4 +47,23 @@ async def sign_in(obj: User):
 
 @router.post("/login")
 async def log_in(obj: LoginDetails):
-    pass
+    """
+    Handles user log-in by returning a jwt if verified
+
+    Args:
+        obj (LoginDetails) : Contains the email and password of the login attempt
+
+    Returns:
+        jwt token(need work)
+
+    Raises:
+        403 login failure
+
+    """
+    if verify_login(obj):
+        return {"message": "successful login"}
+
+    raise HTTPException(
+        status_code=status.HTTP_403_FORBIDDEN,
+        detail="Server error: Could not sign in user",
+    )
