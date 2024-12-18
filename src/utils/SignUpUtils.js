@@ -1,3 +1,5 @@
+import backendAddr from "../backendAddr";
+
 function handleChange(event, signinDeets, setSigninDeets) {
   let field = event.target.id;
   let value = event.target.value;
@@ -117,12 +119,15 @@ function submitForm(event, signinDeets, setSigninDeets, err, setErr, setMode) {
     return;
   } else {
     //sign up success
+    // SIGNUP SUCCESS PROCESS HERE
     console.log("reached");
-
     // need to handle error here
+    sendDetails(signinDeets);
+
     localStorage.setItem("user", JSON.stringify(signinDeets));
 
-    console.log(signinDeets);
+    // console.log(signinDeets);
+
     setSigninDeets({
       first_name: "",
       last_name: "",
@@ -137,6 +142,38 @@ function submitForm(event, signinDeets, setSigninDeets, err, setErr, setMode) {
   }
 }
 
+async function sendDetails(deets) {
+  try {
+    const modified_deets = {
+      f_name: deets.first_name,
+      l_name: deets.last_name,
+      user_name: deets.email,
+      phone: deets.password,
+      email: deets.email,
+      password: deets.password,
+    };
+    const response = await fetch(`${backendAddr}/auth/signin`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(modified_deets), // Send the task data in JSON format
+    });
+
+    if (response.status === 409) {
+      alert("Cannot add duplicate user");
+      return;
+    }
+
+    if (!response.ok) {
+      throw new Error("err sending signin info");
+    }
+
+    console.log("signin sent succesfully");
+  } catch (err) {
+    console.log("Error while adding task:", err);
+  }
+}
 export {
   isEmpty,
   isPhoneValid,

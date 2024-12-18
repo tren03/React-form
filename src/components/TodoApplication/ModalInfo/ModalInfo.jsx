@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import backendAddr from "../../../backendAddr";
 import { TaskContext } from "../../../context/TaskContext";
 import { ModalField } from "../ModalField/ModalField";
 import { SelectInput } from "../SelectInput/SelectInput";
@@ -40,16 +41,13 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
   // used to update Task when updateTask.isUpdate === true
   const updateTask = async (id, updatedTask) => {
     try {
-      const response = await fetch(
-        `http://localhost:8000/update_task?id=${id}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(updatedTask), // Send updated task as JSON
+      const response = await fetch(`${backendAddr}/crud/update_task?id=${id}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify(updatedTask), // Send updated task as JSON
+      });
 
       if (!response.ok) {
         throw new Error("Error updating task");
@@ -88,7 +86,7 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
 
   async function add_new_task(newTask) {
     try {
-      const response = await fetch("http://localhost:8000/add_task", {
+      const response = await fetch(`${backendAddr}/crud/add_task`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

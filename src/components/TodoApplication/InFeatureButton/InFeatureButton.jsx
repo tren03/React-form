@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import backendAddr from "../../../backendAddr";
 import { TaskContext } from "../../../context/TaskContext";
 import "./InFeatureButton.css";
 export const InFeatureButton = ({ action, image, id }) => {
@@ -8,7 +9,7 @@ export const InFeatureButton = ({ action, image, id }) => {
   async function delete_task(taskId) {
     try {
       const response = await fetch(
-        `http://localhost:8000/delete_task?id=${taskId}`,
+        `${backendAddr}/crud/delete_task?id=${taskId}`,
         {
           method: "POST",
           headers: {

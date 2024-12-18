@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import backendAddr from "../../../backendAddr";
 import { TaskContext } from "../../../context/TaskContext";
 import { FunctionBar } from "../FunctionBar/FunctionBar";
 import { TaskButton } from "../TaskButton/TaskButton";
@@ -12,7 +13,8 @@ export const TodoContainer = () => {
     useContext(TaskContext);
   // getting data from db and setting task state
   useEffect(() => {
-    fetch("http://localhost:8000/get_tasks")
+    console.log(backendAddr);
+    fetch(`${backendAddr}/crud/get_tasks`)
       .then((response) => response.json())
       .then((data) => {
         setTasks(data);
