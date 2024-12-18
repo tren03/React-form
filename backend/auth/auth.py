@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException, status
 from backend.db.operations import add_user
-from backend.models.model import User
+from backend.errors.error import DuplicateUserError
+from backend.models.model import LoginDetails, User
 from backend.db.db_connection import get_session
 
 # from backend.model import Task
@@ -26,15 +27,22 @@ async def sign_in(obj: User):
         401 Internal server error
     """
     stat = add_user(obj, get_session())
-    if stat == 0:  # indicates success
-        return {"message": "signin success"}
+    if stat == None:
+        return {"message": "successful"}
 
-    if stat == 1:
+    if isinstance(stat, DuplicateUserError):
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
             detail="Duplicate user",
         )
+
+    print("err while adding sigin-in : ", stat)
     raise HTTPException(
         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         detail="Server error: Could not sign in user",
     )
+
+
+@router.post("/login")
+async def log_in(obj: LoginDetails):
+    pass

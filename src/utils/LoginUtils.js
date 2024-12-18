@@ -1,3 +1,5 @@
+import backendAddr from "../backendAddr";
+
 function handleEmailChange(event, loginDeets, setLoginDeets) {
   let copyLog = { ...loginDeets };
   copyLog.email = event.target.value;
@@ -64,41 +66,30 @@ function submitForm(
   if (flag === true) {
     return;
   } else {
-    // all details pass check, need to check for correct login via local storage
-    console.log(loginDeets);
-
-    // handle error if localstorage disabled
-    try {
-      const userData = localStorage.getItem("user");
-      if (userData === null) {
-        console.log("wrong username password");
-      } else {
-        //user object exists, we need to check that now
-        const userObj = JSON.parse(userData);
-        if (
-          userObj.email === loginDeets.email &&
-          userObj.password === loginDeets.password
-        ) {
-          console.log("succesful login, redirect to profile page");
-          // navigate to profile page
-          localStorage.setItem("isLoggedIn", "true");
-          navigate("/todo");
-        } else {
-          console.log("wrong password");
-          copyErr.wrongpassword = true;
-          setErr(copyErr);
-          return;
-        }
-      }
-    } catch (err) {
-      console.log("err getting object from localStorage");
-    }
+    //need to validate login and get jwt
+    sendLoginDeets(loginDeets);
 
     setLoginDeets({
       email: "",
       password: "",
     });
   }
+}
+
+async function sendLoginDeets(loginDeets) {
+  const modified_deets = {
+    email: loginDeets.email,
+    password: loginDeets.password,
+  };
+
+  const response = await fetch(`${backendAddr}/auth/login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(modified_deets), // Send the task data in JSON format
+  });
+  console.log(response);
 }
 
 export {

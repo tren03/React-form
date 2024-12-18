@@ -145,9 +145,9 @@ function submitForm(event, signinDeets, setSigninDeets, err, setErr, setMode) {
 async function sendDetails(deets) {
   try {
     const modified_deets = {
-      f_name: deets.first_name,
-      l_name: deets.last_name,
-      user_name: deets.email,
+      first_name: deets.first_name,
+      last_name: deets.last_name,
+      user_name: deets.user_name,
       phone: deets.password,
       email: deets.email,
       password: deets.password,

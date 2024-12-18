@@ -10,7 +10,7 @@ from sqlalchemy.orm import (
     sessionmaker,
 )
 from sqlalchemy.exc import SQLAlchemyError
-from backend.model import User as PyUser
+from backend.models.model import User as PyUser
 
 
 # returns db conn object or None -> needed for crud which was done before sqlalchemy port

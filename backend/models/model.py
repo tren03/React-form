@@ -3,10 +3,14 @@ from typing import Optional
 
 
 class Task(BaseModel):
-    taskId: Optional[int] = None
-    taskTitle: str
-    taskDescription: str
-    taskCategory: str
+    task_title: str
+    task_description: str
+    task_category: str
+
+
+class LoginDetails(BaseModel):
+    email: str
+    password: str
 
 
 class User(BaseModel):

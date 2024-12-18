@@ -1,12 +1,13 @@
-from sqlalchemy import Engine, ForeignKey, String, Integer
+from sqlalchemy import DATETIME, DateTime, Engine, ForeignKey, String, Integer, func
 from sqlalchemy.orm import (
     DeclarativeBase,
     Mapped,
     mapped_column,
 )
 from sqlalchemy.exc import SQLAlchemyError
-from backend.db.db_connection import get_engine, get_session
-from backend.models.model import User as PyUser
+from backend.db.db_connection import get_engine
+from sqlalchemy.dialects.sqlite import DATETIME
+import re
 
 
 # sqlalchemy part
@@ -41,6 +42,10 @@ class User(Base):
     phone: Mapped[str] = mapped_column(String)
     email: Mapped[str] = mapped_column(String, index=True)
     password: Mapped[str] = mapped_column(String)
+    time_created: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
+    time_updated: Mapped[DateTime] = mapped_column(
+        DateTime, server_default=func.now(), onupdate=str(func.now())
+    )
 
     # will do by hand
     # tasks = relationship("Task", back_populates="user", cascade="all, delete-orphan")
@@ -73,7 +78,10 @@ class Task(Base):
     user_id: Mapped[int] = mapped_column(
         Integer, ForeignKey("user.user_id"), nullable=False
     )
-
+    time_created: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
+    time_updated: Mapped[DateTime] = mapped_column(
+        DateTime, server_default=func.now(), onupdate=str(func.now())
+    )
     # user = relationship("User", back_populates="tasks")
 
     def __repr__(self) -> str:
