@@ -25,6 +25,9 @@ async def add_task(task: PyTask, user_id: Annotated[str, Body()]):
     try:
         add_task_to_db(task, user_id, get_session())
         all_tasks = get_all_tasks_from_db(user_id, get_session())
+        custom_logger.info(
+            f"list returned after addition for user {user_id} = {all_tasks} "
+        )
         return {"task_list": all_tasks}
 
     except UserNotFound as e:
@@ -52,6 +55,7 @@ async def delete_task(user_id: Annotated[str, Body()], task_id: Annotated[str, B
 
         delete_task_from_db(task_id, get_session())
         all_tasks = get_all_tasks_from_db(user_id, get_session())
+        custom_logger.info(f"list returned after deleting task = {all_tasks} ")
         return {"task_list": all_tasks}
 
     except TaskNotFound as e:
@@ -89,6 +93,9 @@ async def update_task(
 
         update_task_to_db(user_id, old_task_id, new_task, get_session())
         all_tasks = get_all_tasks_from_db(user_id, get_session())
+        custom_logger.info(
+            f"list returned after updating task for user {user_id} = {all_tasks} "
+        )
         return {"task_list": all_tasks}
 
     except TaskNotFound as e:
@@ -120,6 +127,7 @@ async def get_all_tasks(UID: UserID):
     """
     try:
         all_tasks = get_all_tasks_from_db(UID.user_id, get_session())
+        custom_logger.info(f"list returned for user {UID.user_id} = {all_tasks} ")
         return {"task_list": all_tasks}
 
     except UserNotFound as e:

@@ -32,6 +32,7 @@ async def sign_in(obj: PyUser):
     """
     try:
         add_user(obj, get_session())
+        custom_logger.info(f"user successfully signed in {obj} ")
         return {"message": "successful"}
     except CustomError as e:
         custom_logger.error("error while signing new user", e)
@@ -58,6 +59,7 @@ async def log_in(obj: LoginDetails):
     """
     try:
         verify_login(obj)
+        custom_logger.info(f"user successfully logged in {obj} ")
         return {"message": "successful login"}
     except CustomError as e:
         custom_logger.error("Error while logging in ", e)
