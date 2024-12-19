@@ -19,12 +19,12 @@ def get_db_conn():
 
 
 def get_session() -> Session:
-    engine = create_engine(DB_URL, echo=True)
+    engine = create_engine(DB_URL, echo=False)
     Session = sessionmaker(bind=engine)
     session = Session()
     return session
 
 
 def get_engine() -> Engine:
-    engine = create_engine(DB_URL, echo=True)
+    engine = create_engine(DB_URL, echo=False)
     return engine

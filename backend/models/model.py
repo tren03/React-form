@@ -6,8 +6,13 @@ class UserID(BaseModel):
     user_id: str
 
 
+class JWTInfo(BaseModel):
+    user_id: str
+    email: str
+
+
 # By changing the schema we break all crud operations done before sqlalchemy
-class Task(BaseModel):
+class PyTask(BaseModel):
     task_title: str
     task_description: str
     task_category: str
@@ -18,7 +23,7 @@ class LoginDetails(BaseModel):
     password: str
 
 
-class User(BaseModel):
+class PyUser(BaseModel):
     first_name: str
     last_name: str
     user_name: str

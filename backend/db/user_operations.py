@@ -1,26 +1,34 @@
 import uuid
+from pydantic import ValidationError
 from sqlalchemy import select, and_
-from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy.exc import DuplicateColumnError, SQLAlchemyError
 from sqlalchemy.orm import Session
-from backend.db.conversions import user_alchemy_to_pydantic, user_pydantic_to_alchemy
+from backend.db.conversions import (
+    user_alchemy_to_pydantic,
+    new_user_pydantic_to_alchemy,
+)
 from backend.db.db_connection import get_session
-from backend.errors.error import DuplicateUserError, UserNotFound
-from backend.models.model import User as PyUser
+from backend.errors.error import (
+    AlchemyToPydanticErr,
+    DuplicateUserError,
+    PydanticToAlchemyErr,
+    UserNotFound,
+)
+from backend.logger.logger import custom_logger
+from backend.models.model import PyUser as PyUser
 from backend.db.migrations import User
 
 
-def add_user(user_to_add: PyUser, session: Session) -> None | Exception:
+def add_user(user_to_add: PyUser, session: Session) -> None:
     """
     Adds a user to the "user" table and session
     Accepts a pydantic user model and adds in to the database by converting to sqlalchemy model
 
-    return:
     None - success
-    Exception - any error during addition
+    rasies Exception - any error during addition
 
     """
     try:
-        print(uuid.uuid4())
         if (
             session.query(User)
             .filter(and_(User.email == user_to_add.email, User.is_deleted == False))
@@ -29,29 +37,29 @@ def add_user(user_to_add: PyUser, session: Session) -> None | Exception:
             # we have a existing user
             raise DuplicateUserError
 
-        sql_alchemy_user_to_add = user_pydantic_to_alchemy(user_to_add)
-        if isinstance(sql_alchemy_user_to_add, Exception):
-            raise sql_alchemy_user_to_add
+        sql_alchemy_user_to_add = new_user_pydantic_to_alchemy(user_to_add)
+
         session.add(sql_alchemy_user_to_add)
         session.commit()
 
+    except PydanticToAlchemyErr as e:
+        custom_logger.error("Error converting pydantic to alc", e)
+        raise e
+
     except DuplicateUserError as e:
-        print(f"DuplicateUserError {e}")
-        return e
+        custom_logger.error("Duplicate user error while adding user ", e)
+        raise e
 
     except SQLAlchemyError as e:
-        print(f"exception during user creation {e}")
-        return e
-
-    except Exception as e:
-        print(f"something went wrong in addition of user during sign in ", e)
-        return e
+        custom_logger.error("sqlalchemy error during addition of user ", e)
+        raise e
 
 
-def get_user_by_email(email: str) -> PyUser | Exception:
+def get_user_by_email(email: str) -> PyUser | None:
     """
     Gets a user by email
     return pydantic User model or error if user not found
+    errors = UserNotFound,Exception
     """
     try:
         stmt = (
@@ -63,18 +71,22 @@ def get_user_by_email(email: str) -> PyUser | Exception:
         result = session.execute(stmt)
         user = result.scalars().first()
         if user:
-            return user_alchemy_to_pydantic(user)
+            pydantic_user = user_alchemy_to_pydantic(user)
+            if pydantic_user:
+                return pydantic_user
         else:
             raise UserNotFound
+
+    except AlchemyToPydanticErr as e:
+        custom_logger.error(f"Error converting pydantic to alchemy ", e)
+        raise e
+
     except UserNotFound as e:
-        print(f"Login email address not found in database", e)
-        return e
-    except Exception as e:
-        print(f"Something went wrong while getting email of user for login checking", e)
-        return e
+        custom_logger.error(f"Login email address not found in database", e)
+        raise e
 
 
-def get_user_by_id(user_id: str) -> PyUser | Exception:
+def get_user_by_id(user_id: str) -> PyUser | None:
     """
     Gets a user by id
     return pydantic User model or error if user not found
@@ -90,12 +102,16 @@ def get_user_by_id(user_id: str) -> PyUser | Exception:
         result = session.execute(stmt)
         user = result.scalars().first()
         if user:
-            return user_alchemy_to_pydantic(user)
+            pydantic_user = user_alchemy_to_pydantic(user)
+            if pydantic_user:
+                return pydantic_user
         else:
             raise UserNotFound
+
+    except AlchemyToPydanticErr as e:
+        custom_logger.error(f"Error converting pydantic to alchemy ", e)
+        raise e
+
     except UserNotFound as e:
-        print(f"User Not found in the Database", e)
-        return e
-    except Exception as e:
-        print(f"Something went wrong while getting email of user for login checking", e)
-        return e
+        custom_logger.error(f"User with given id doesnt exist", e)
+        raise e
