@@ -36,6 +36,6 @@ class PydanticToAlchemyErr(CustomError):
         return "PydanticToAlchemy failed"
 
 
-class TaskAdditionError(CustomError):
+class TaskNotFound(CustomError):
     def message(self) -> str:
-        return "Error while adding task"
+        return "User not found"

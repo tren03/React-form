@@ -1,5 +1,5 @@
 import uuid
-from sqlalchemy import select
+from sqlalchemy import select, and_
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 from backend.db.conversions import user_alchemy_to_pydantic, user_pydantic_to_alchemy
@@ -21,7 +21,11 @@ def add_user(user_to_add: PyUser, session: Session) -> None | Exception:
     """
     try:
         print(uuid.uuid4())
-        if session.query(User).filter(User.email == user_to_add.email).first():
+        if (
+            session.query(User)
+            .filter(and_(User.email == user_to_add.email, User.is_deleted == False))
+            .first()
+        ):
             # we have a existing user
             raise DuplicateUserError
 
@@ -50,7 +54,11 @@ def get_user_by_email(email: str) -> PyUser | Exception:
     return pydantic User model or error if user not found
     """
     try:
-        stmt = select(User).where(User.email == email).limit(1)
+        stmt = (
+            select(User)
+            .where(and_(User.email == email, User.is_deleted == False))
+            .limit(1)
+        )
         session = get_session()
         result = session.execute(stmt)
         user = result.scalars().first()
@@ -60,6 +68,33 @@ def get_user_by_email(email: str) -> PyUser | Exception:
             raise UserNotFound
     except UserNotFound as e:
         print(f"Login email address not found in database", e)
+        return e
+    except Exception as e:
+        print(f"Something went wrong while getting email of user for login checking", e)
+        return e
+
+
+def get_user_by_id(user_id: str) -> PyUser | Exception:
+    """
+    Gets a user by id
+    return pydantic User model or error if user not found
+    """
+    try:
+        stmt = (
+            select(User)
+            .where(and_(User.user_id == user_id, User.is_deleted == False))
+            .limit(1)
+        )
+
+        session = get_session()
+        result = session.execute(stmt)
+        user = result.scalars().first()
+        if user:
+            return user_alchemy_to_pydantic(user)
+        else:
+            raise UserNotFound
+    except UserNotFound as e:
+        print(f"User Not found in the Database", e)
         return e
     except Exception as e:
         print(f"Something went wrong while getting email of user for login checking", e)

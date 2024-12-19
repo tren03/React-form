@@ -1,4 +1,13 @@
-from sqlalchemy import DATETIME, DateTime, Engine, ForeignKey, String, Integer, func
+from sqlalchemy import (
+    DATETIME,
+    Boolean,
+    DateTime,
+    Engine,
+    ForeignKey,
+    String,
+    Integer,
+    func,
+)
 from sqlalchemy.orm import (
     DeclarativeBase,
     Mapped,
@@ -44,8 +53,9 @@ class User(Base):
     password: Mapped[str] = mapped_column(String)
     time_created: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
     time_updated: Mapped[DateTime] = mapped_column(
-        DateTime, server_default=func.now(), onupdate=str(func.now())
+        DateTime, server_default=func.now(), onupdate=func.now()
     )
+    is_deleted: Mapped[bool] = mapped_column(Boolean, default=False)
 
     # will do by hand
     # tasks = relationship("Task", back_populates="user", cascade="all, delete-orphan")
@@ -80,8 +90,9 @@ class Task(Base):
     )
     time_created: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
     time_updated: Mapped[DateTime] = mapped_column(
-        DateTime, server_default=func.now(), onupdate=str(func.now())
+        DateTime, server_default=func.now(), onupdate=func.now()
     )
+    is_deleted: Mapped[bool] = mapped_column(Boolean, default=False)
     # user = relationship("User", back_populates="tasks")
 
     def __repr__(self) -> str:
