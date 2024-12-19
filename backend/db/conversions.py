@@ -1,12 +1,18 @@
+from pydantic import ValidationError
+from sqlalchemy.exc import SQLAlchemyError
 from backend.db.migrations import User
 from backend.db.migrations import Task
-from backend.errors.error import AlchemyToPydanticErr, PydanticToAlchemyErr
-from backend.models.model import User as PyUser
-from backend.models.model import Task as PyTask
+from backend.errors.error import (
+    AlchemyToPydanticErr,
+    PydanticToAlchemyErr,
+)
+from backend.models.model import PyUser as PyUser
+from backend.models.model import PyTask as PyTask
+from backend.logger.logger import custom_logger
 import uuid
 
 
-def user_alchemy_to_pydantic(alchemy_user: User) -> PyUser | Exception:
+def user_alchemy_to_pydantic(alchemy_user: User) -> PyUser | None:
     """
     Takes sqlalchemy user object and converts to pydantic user model
     Returns custom error - AlchemyToPydanticErr if the conversion fails.
@@ -21,18 +27,18 @@ def user_alchemy_to_pydantic(alchemy_user: User) -> PyUser | Exception:
             password=alchemy_user.password,
         )
         return pydantic_user
-    except Exception as e:
-        print(
+    except ValidationError as e:
+        custom_logger.error(
             "somthing went wrong while conversion of user from alchemy to pydantic model ",
             e,
         )
-        return AlchemyToPydanticErr()
+        raise AlchemyToPydanticErr
 
 
-def user_pydantic_to_alchemy(pydantic_user: PyUser) -> User | Exception:
+def new_user_pydantic_to_alchemy(pydantic_user: PyUser) -> User | None:
     """
-    Takes pydantic user object and converts to sqlalchemy user model.
-    Returns custom error - PydanticToAlchemyErr if the conversion fails.
+    Takes pydantic user object and converts to sqlalchemy user model and returns a new PyUser object
+    raises custom error - PydanticToAlchemyErr if the conversion fails.
     """
     try:
         sql_alchemy_user = User(
@@ -45,18 +51,40 @@ def user_pydantic_to_alchemy(pydantic_user: PyUser) -> User | Exception:
             password=pydantic_user.password,
         )
         return sql_alchemy_user
-    except Exception as e:
-        print(
-            "somthing went wrong while conversion of user from pydantic to alchemy model ",
-            e,
-        )
-        return PydanticToAlchemyErr()
+    except SQLAlchemyError as e:
+        custom_logger.info("Error during conversion of pydantic to alchemy model ", e)
+        raise PydanticToAlchemyErr
 
 
-def task_alchemy_to_pydantic(alchemy_task: Task) -> PyTask | Exception:
+# to work on
+# def existing_user_pydantic_to_alchemy(pydantic_user: PyUser) -> User | Exception:
+#     """
+#     Takes pydantic user object and converts to sqlalchemy user model and returns a PyUser object which exisits in the database
+#     errors = UserNotFound, Exception
+#     """
+#     try:
+#         verified_pydantic_user = get_user_by_email(pydantic_user.email)
+#         if isinstance(verified_pydantic_user, Exception):
+#             raise verified_pydantic_user
+#
+#         return User()
+#
+#     except UserNotFound as e:
+#         print(f"Login email address not found in database", e)
+#         return e
+#     except Exception as e:
+#         print(
+#             "somthing went wrong while conversion of user from pydantic to alchemy model ",
+#             e,
+#         )
+#         return PydanticToAlchemyErr()
+#
+
+
+def task_alchemy_to_pydantic(alchemy_task: Task) -> PyTask:
     """
     Takes sqlalchemy task object and converts to pydantic task model
-    Returns custom Exception - AlchemyToPydanticErr if the conversion fails.
+    error AlchemyToPydanticErr
     """
     try:
         pydantic_task = PyTask(
@@ -65,15 +93,15 @@ def task_alchemy_to_pydantic(alchemy_task: Task) -> PyTask | Exception:
             task_category=alchemy_task.task_category,
         )
         return pydantic_task
-    except Exception as e:
-        print(
+    except ValidationError as e:
+        custom_logger.error(
             "somthing went wrong while conversion of Task from alchemy to pydantic model ",
             e,
         )
-        return AlchemyToPydanticErr()
+        raise AlchemyToPydanticErr
 
 
-def task_pydantic_to_alchemy(pydantic_task: PyTask, user_id: str) -> Task | Exception:
+def new_task_pydantic_to_alchemy(pydantic_task: PyTask, user_id: str) -> Task:
     """
     Takes pydantic task object and user_id(foreign key) and converts to sqlalchemy task model.
     Returns custom error - PydanticToAlchemyErr if the conversion fails.
@@ -87,9 +115,9 @@ def task_pydantic_to_alchemy(pydantic_task: PyTask, user_id: str) -> Task | Exce
             user_id=user_id,
         )
         return sql_alchemy_task
-    except Exception as e:
-        print(
+    except SQLAlchemyError as e:
+        custom_logger.error(
             "somthing went wrong while conversion of Task from pydantic to alchemy model ",
             e,
         )
-        return PydanticToAlchemyErr()
+        raise PydanticToAlchemyErr

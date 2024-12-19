@@ -1,8 +1,7 @@
 from fastapi import APIRouter, HTTPException, status
 from fastapi.params import Body
-from sqlalchemy.exc import SQLAlchemyError
-from backend.errors.error import TaskNotFound, UserNotFound
-from backend.models.model import Task, UserID
+from backend.errors.error import CustomError, TaskNotFound, UserNotFound
+from backend.models.model import PyTask, UserID
 from backend.db.db_connection import get_db_conn, get_session
 from backend.db.task_operations import (
     add_task as add_task_to_db,
@@ -10,6 +9,8 @@ from backend.db.task_operations import (
     delete_task as delete_task_from_db,
     update_task as update_task_to_db,
 )
+from backend.logger.logger import custom_logger
+
 
 from typing import Annotated
 
@@ -17,34 +18,31 @@ router = APIRouter()
 
 
 @router.post("/add_task")
-async def add_task(task: Task, user_id: Annotated[str, Body()]):
+async def add_task(task: PyTask, user_id: Annotated[str, Body()]):
     """
     Takes a Task and userid and adds it to the database
     """
-    stat = add_task_to_db(task, user_id, get_session())
+    try:
+        add_task_to_db(task, user_id, get_session())
+        all_tasks = get_all_tasks_from_db(user_id, get_session())
+        custom_logger.info(
+            f"list returned after addition for user {user_id} = {all_tasks} "
+        )
+        return {"task_list": all_tasks}
 
-    if isinstance(stat, UserNotFound):
+    except UserNotFound as e:
+        custom_logger.info("User not found")
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"User to add task not found: {str(stat)}",
+            detail=f"User to add task not found",
         )
 
-    if isinstance(stat, Exception):
+    except CustomError as e:
+        custom_logger.info("Err during adding task ", e.message())
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Error while adding task: {str(stat)}",
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Error while adding task",
         )
-
-    # addition successful
-    stat = get_all_tasks_from_db(user_id, get_session())
-
-    if isinstance(stat, Exception):
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Error getting tasks from database: {str(stat)}",
-        )
-
-    return {"task_list": stat}
 
 
 # for now we take user_id, but after jwt, we get user_id from there
@@ -53,75 +51,73 @@ async def delete_task(user_id: Annotated[str, Body()], task_id: Annotated[str, B
     """
     Takes a task_id and sets the delete flag to true
     """
-    stat = delete_task_from_db(task_id, get_session())
+    try:
 
-    if isinstance(stat, TaskNotFound):
+        delete_task_from_db(task_id, get_session())
+        all_tasks = get_all_tasks_from_db(user_id, get_session())
+        custom_logger.info(f"list returned after deleting task = {all_tasks} ")
+        return {"task_list": all_tasks}
+
+    except TaskNotFound as e:
+        custom_logger.error("task to delete not found ", e)
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"task to delete not found",
         )
 
-    if isinstance(stat, Exception):
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=f"Error while adding task: {str(stat)}",
-        )
-
-    # deletion successful
-    stat = get_all_tasks_from_db(user_id, get_session())
-
-    if isinstance(stat, UserNotFound):
+    except UserNotFound as e:
+        custom_logger.error("User whose task needs to be deleted not found", e)
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"Error while getting tasks from databse : {str(stat)}",
+            detail=f"task to delete not found",
         )
 
-    if isinstance(stat, Exception):
+    except CustomError as e:
+        custom_logger.error("err during deletion of task ", e)
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Error getting tasks from database: {str(stat)}",
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"err deleting task",
         )
-
-    return {"task_list": stat}
 
 
 @router.post("/update_task")
 async def update_task(
-    user_id: Annotated[str, Body()], old_task_id: Annotated[str, Body()], new_task: Task
+    user_id: Annotated[str, Body()],
+    old_task_id: Annotated[str, Body()],
+    new_task: PyTask,
 ):
     """
     Takes a user_id, old_task_id, and a new_task  ,sets the delete flag to true on old_task and adds new task and returns all tasks
     """
-    stat = update_task_to_db(user_id, old_task_id, new_task, get_session())
+    try:
 
-    if isinstance(stat, TaskNotFound):
+        update_task_to_db(user_id, old_task_id, new_task, get_session())
+        all_tasks = get_all_tasks_from_db(user_id, get_session())
+        custom_logger.info(
+            f"list returned after updating task for user {user_id} = {all_tasks} "
+        )
+        return {"task_list": all_tasks}
+
+    except TaskNotFound as e:
+        custom_logger.error("task to delete not found ", e)
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"task to delete not found",
         )
 
-    if isinstance(stat, Exception):
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=f"Error while adding task: {str(stat)}",
-        )
-
-    # deletion successful
-    stat = get_all_tasks_from_db(user_id, get_session())
-
-    if isinstance(stat, UserNotFound):
+    except UserNotFound as e:
+        custom_logger.error("User whose task needs to be deleted not found", e)
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"Error while getting tasks from databse : {str(stat)}",
+            detail=f"task to delete not found",
         )
 
-    if isinstance(stat, Exception):
+    except CustomError as e:
+        custom_logger.error("err during deletion of task ", e)
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Error getting tasks from database: {str(stat)}",
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"err deleting task",
         )
-
-    return {"task_list": stat}
 
 
 @router.post("/get_all_tasks")
@@ -129,18 +125,21 @@ async def get_all_tasks(UID: UserID):
     """
     Given a user_id, returns all tasks of that user
     """
-    stat = get_all_tasks_from_db(UID.user_id, get_session())
+    try:
+        all_tasks = get_all_tasks_from_db(UID.user_id, get_session())
+        custom_logger.info(f"list returned for user {UID.user_id} = {all_tasks} ")
+        return {"task_list": all_tasks}
 
-    if isinstance(stat, UserNotFound):
+    except UserNotFound as e:
+        custom_logger.error("User whose task needs to be deleted not found", e)
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"Error while getting tasks from databse : {str(stat)}",
+            detail=f"user not found",
         )
 
-    if isinstance(stat, Exception):
+    except CustomError as e:
+        custom_logger.error("err during deletion of task ", e)
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Error getting tasks from database: {str(stat)}",
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"err gettinga all tasks task",
         )
-
-    return {"task_list": stat}

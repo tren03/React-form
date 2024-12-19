@@ -10,7 +10,8 @@ from sqlalchemy.orm import (
     sessionmaker,
 )
 from sqlalchemy.exc import SQLAlchemyError
-from backend.models.model import User as PyUser
+from backend.logger.logger import custom_logger
+from backend.models.model import PyUser as PyUser
 
 
 # returns db conn object or None -> needed for crud which was done before sqlalchemy port
@@ -104,59 +105,16 @@ class Task(Base):
         return f"Task(id={self.task_id}, title={self.task_title}, description={self.task_description}, category={self.task_category})"
 
 
-def create_tables() -> int:
+def create_tables():
     """
     create tables specified by base class - base class is defined in the same module as this function
     returns 0 for sucess or 1 for failure
     """
     try:
         Base.metadata.create_all(engine)
-        new_user = PyUser(
-            first_name="John",
-            last_name="Doe",
-            user_name="john_doe",
-            phone="1234567890",
-            email="john.doe@example.com",
-            password="securepassword123",
-        )
-
-        result = session.add(new_user)
 
     except SQLAlchemyError as e:
-        print(f"exception during table creation {e}")
-        return 1
-    return 0
-
-
-def add_user(user_to_add: PyUser) -> int:
-    """
-    Adds a user to the "user" table
-    Accepts a pydantic user model and adds in to the database by converting to sqlalchemy model
-    returns
-    0 = success
-    1 = IntegrityError -> duplicate user addition
-    2 = general error
-    """
-    try:
-        if session.query(User).filter(User.email == user_to_add.email).first():
-            # we have a existing user
-            print("existing user addition error")
-            return 1
-        sql_alchemy_user_to_add = User(
-            first_name=user_to_add.first_name,
-            last_name=user_to_add.last_name,
-            user_name=user_to_add.user_name,
-            phone=user_to_add.phone,
-            email=user_to_add.email,
-            password=user_to_add.password,
-        )
-        session.add(sql_alchemy_user_to_add)
-        session.commit()
-
-    except SQLAlchemyError as e:
-        print(f"exception during user creation {e}")
-        return 2
-    return 0
+        custom_logger.error(f"exception during table creation {e}")
 
 
 if __name__ == "__main__":

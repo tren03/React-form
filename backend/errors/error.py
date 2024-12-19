@@ -19,6 +19,12 @@ class DuplicateUserError(CustomError):
         return "User with this email already exists."
 
 
+# Specific error classes
+class InvalidUserLogin(CustomError):
+    def message(self) -> str:
+        return "Invalid login credentaials"
+
+
 class UserNotFound(CustomError):
     def message(self) -> str:
         return "User not found"

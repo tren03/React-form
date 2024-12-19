@@ -1,10 +1,12 @@
 from fastapi import APIRouter, HTTPException, status
 from starlette.status import HTTP_401_UNAUTHORIZED, HTTP_403_FORBIDDEN
 from backend.auth.auth_utils import verify_login
+from backend.auth.jwt_utils import create_jwt
 from backend.db.user_operations import add_user, get_user_by_email
-from backend.errors.error import DuplicateUserError, UserNotFound
-from backend.models.model import LoginDetails, User
+from backend.errors.error import CustomError, DuplicateUserError, UserNotFound
+from backend.models.model import JWTInfo, LoginDetails, PyUser
 from backend.db.db_connection import get_session
+from backend.logger.logger import custom_logger
 
 # from backend.model import Task
 # from backend.db import get_db_conn
@@ -14,7 +16,7 @@ router = APIRouter()
 
 
 @router.post("/signin")
-async def sign_in(obj: User):
+async def sign_in(obj: PyUser):
     """
     Handles user sign-in by attempting to add the user to the system.
 
@@ -28,21 +30,16 @@ async def sign_in(obj: User):
         409 duplicate user
         401 Internal server error
     """
-    stat = add_user(obj, get_session())
-    if stat == None:
+    try:
+        add_user(obj, get_session())
+        custom_logger.info(f"user successfully signed in {obj} ")
         return {"message": "successful"}
-
-    if isinstance(stat, DuplicateUserError):
+    except CustomError as e:
+        custom_logger.error("error while signing new user", e)
         raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT,
-            detail="Duplicate user",
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="err while signing new user",
         )
-
-    print("err while adding sigin-in : ", stat)
-    raise HTTPException(
-        status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-        detail="Server error: Could not sign in user",
-    )
 
 
 @router.post("/login")
@@ -60,10 +57,13 @@ async def log_in(obj: LoginDetails):
         403 login failure
 
     """
-    if verify_login(obj):
+    try:
+        verify_login(obj)
+        custom_logger.info(f"user successfully logged in {obj} ")
         return {"message": "successful login"}
-
-    raise HTTPException(
-        status_code=status.HTTP_403_FORBIDDEN,
-        detail="Server error: Could not sign in user",
-    )
+    except CustomError as e:
+        custom_logger.error("Error while logging in ", e)
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Server error: Could not sign in user",
+        )
