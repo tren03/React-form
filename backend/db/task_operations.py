@@ -97,7 +97,7 @@ def get_all_task(user_id: str, session: Session) -> list[PyTask] | Exception:
 def delete_task(task_id: str, session: Session) -> None | Exception:
     """
     deletes a task by setting the is_deleted flag to true for it,
-    Errors = TaskNotFound,AlchemyToPydanticErr,User
+    Errors = TaskNotFound,AlchemyToPydanticErr,SQLAlchemyError,Exception
     """
     try:
         task = (
@@ -129,6 +129,48 @@ def delete_task(task_id: str, session: Session) -> None | Exception:
         return e
 
 
+def update_task(
+    user_id: str, old_task_id: str, new_task: PyTask, session: Session
+) -> None | Exception:
+    """
+    Taked in old_task_id and a new pyTask object and updates it in database
+    returns none if success else returns error
+    Errors = TaskNotFound,SQLAlchemyError,Exception
+    """
+    try:
+        delete_task_flag = delete_task(old_task_id, session)
+        if isinstance(delete_task_flag, Exception):
+            raise delete_task_flag
+
+        add_updated_task = add_task(new_task, user_id, session)
+        if isinstance(add_updated_task, Exception):
+            raise add_updated_task
+
+    except TaskNotFound as e:
+        print("Task not found in the database while deleting")
+        return e
+
+    except AlchemyToPydanticErr as e:
+        print("Error in converting model from alchemy to pydantic", e)
+        return e
+
+    except PydanticToAlchemyErr as e:
+        print("Error in converting model from pydantic to alchemy", e)
+        return e
+
+    except UserNotFound as e:
+        print("The user whose task needs to be added, doesnt exist : ", e)
+        return e
+
+    except SQLAlchemyError as e:
+        print("Errror in getting all tasks during sqlalchemy operation : ", e)
+        return e
+
+    except Exception as e:
+        print("General error while getting all tasks :", e)
+        return e
+
+
 def get_task_by_id(task_id: str, session: Session) -> PyTask | Exception:
     """
     Gets a task by id
@@ -149,13 +191,15 @@ def get_task_by_id(task_id: str, session: Session) -> PyTask | Exception:
             raise TaskNotFound
 
     except TaskNotFound as e:
-        print(f"Task do delet not found in database", e)
+        print(f"Task not found in database", e)
         return e
 
     except SQLAlchemyError as e:
-        print("Error in deleting tasks from database during sqlalchemy operation", e)
+        print(
+            "Error in getting task by id from database during sqlalchemy operation", e
+        )
         return e
 
     except Exception as e:
-        print(f"Something went wrong while deleting task from database", e)
+        print(f"Something went wrong while getting task by id from database", e)
         return e

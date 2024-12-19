@@ -2,12 +2,13 @@ from fastapi import APIRouter, HTTPException, status
 from fastapi.params import Body
 from sqlalchemy.exc import SQLAlchemyError
 from backend.errors.error import TaskNotFound, UserNotFound
-from backend.models.model import Task
+from backend.models.model import Task, UserID
 from backend.db.db_connection import get_db_conn, get_session
 from backend.db.task_operations import (
     add_task as add_task_to_db,
     get_all_task as get_all_tasks_from_db,
     delete_task as delete_task_from_db,
+    update_task as update_task_to_db,
 )
 
 from typing import Annotated
@@ -68,6 +69,67 @@ async def delete_task(user_id: Annotated[str, Body()], task_id: Annotated[str, B
 
     # deletion successful
     stat = get_all_tasks_from_db(user_id, get_session())
+
+    if isinstance(stat, UserNotFound):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Error while getting tasks from databse : {str(stat)}",
+        )
+
+    if isinstance(stat, Exception):
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error getting tasks from database: {str(stat)}",
+        )
+
+    return {"task_list": stat}
+
+
+@router.post("/update_task")
+async def update_task(
+    user_id: Annotated[str, Body()], old_task_id: Annotated[str, Body()], new_task: Task
+):
+    """
+    Takes a user_id, old_task_id, and a new_task  ,sets the delete flag to true on old_task and adds new task and returns all tasks
+    """
+    stat = update_task_to_db(user_id, old_task_id, new_task, get_session())
+
+    if isinstance(stat, TaskNotFound):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"task to delete not found",
+        )
+
+    if isinstance(stat, Exception):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Error while adding task: {str(stat)}",
+        )
+
+    # deletion successful
+    stat = get_all_tasks_from_db(user_id, get_session())
+
+    if isinstance(stat, UserNotFound):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Error while getting tasks from databse : {str(stat)}",
+        )
+
+    if isinstance(stat, Exception):
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error getting tasks from database: {str(stat)}",
+        )
+
+    return {"task_list": stat}
+
+
+@router.post("/get_all_tasks")
+async def get_all_tasks(UID: UserID):
+    """
+    Given a user_id, returns all tasks of that user
+    """
+    stat = get_all_tasks_from_db(UID.user_id, get_session())
 
     if isinstance(stat, UserNotFound):
         raise HTTPException(

@@ -2,6 +2,10 @@ from pydantic import BaseModel
 from typing import Optional
 
 
+class UserID(BaseModel):
+    user_id: str
+
+
 # By changing the schema we break all crud operations done before sqlalchemy
 class Task(BaseModel):
     task_title: str
