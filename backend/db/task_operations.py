@@ -5,7 +5,6 @@ from backend.db.conversions import (
     task_alchemy_to_pydantic,
     new_task_pydantic_to_alchemy,
 )
-from backend.db.user_operations import get_user_by_id
 from backend.errors.error import (
     AlchemyToPydanticErr,
     PydanticToAlchemyErr,
@@ -13,11 +12,11 @@ from backend.errors.error import (
     UserNotFound,
 )
 from backend.logger.logger import custom_logger
-from backend.models.model import PyTask as PyTask
-from backend.db.migrations import User, Task
+from backend.models.dto import TaskDto as TaskDto
+from backend.db.migrations import UserModel, TaskModel
 
 
-def add_task(task_to_add: PyTask, user_id: str, session: Session) -> None:
+def add_task(task_to_add: TaskDto, user_id: str, session: Session) -> None:
     """
     accepts Pydantic task and user_id of the owner of the task and adds it to the database, returns None for success
     raises PydanticToAlchemyErr,UserNotFound,SQLAlchemyError
@@ -46,18 +45,18 @@ def add_task(task_to_add: PyTask, user_id: str, session: Session) -> None:
         raise e
 
 
-def get_all_task(user_id: str, session: Session) -> list[PyTask] | None:
+def get_all_task(user_id: str, session: Session) -> list[TaskDto] | None:
     """
     gets all tasks for a given userid, else returns error
     returns AlchemyToPydanticErr,UserNotFound,SQLAlchemyError,Exception based on operations
     """
     try:
         user_by_id = get_user_by_id(user_id)
-        all_tasks_stmt = select(Task).where(
-            and_(Task.user_id == user_id, Task.is_deleted == False)
+        all_tasks_stmt = select(TaskModel).where(
+            and_(TaskModel.user_id == user_id, TaskModel.is_deleted == False)
         )
         rows = session.execute(all_tasks_stmt)
-        pydantic_task_list: list[PyTask] = []
+        pydantic_task_list: list[TaskDto] = []
         for obj in rows.scalars().all():
             pyd_obj = task_alchemy_to_pydantic(obj)
             pydantic_task_list.append(pyd_obj)
@@ -92,8 +91,8 @@ def delete_task(task_id: str, session: Session) -> None:
     """
     try:
         task = (
-            session.query(Task)
-            .filter(and_(Task.task_id == task_id, Task.is_deleted == False))
+            session.query(TaskModel)
+            .filter(and_(TaskModel.task_id == task_id, TaskModel.is_deleted == False))
             .first()
         )
 
@@ -127,7 +126,7 @@ def delete_task(task_id: str, session: Session) -> None:
 
 
 def update_task(
-    user_id: str, old_task_id: str, new_task: PyTask, session: Session
+    user_id: str, old_task_id: str, new_task: TaskDto, session: Session
 ) -> None:
     """
     Takes in old_task_id and a new pyTask object and updates it in database
@@ -161,7 +160,7 @@ def update_task(
         raise e
 
 
-def get_task_by_id(task_id: str, session: Session) -> PyTask | Exception:
+def get_task_by_id(task_id: str, session: Session) -> TaskDto | Exception:
     """
     Gets a task by id
     return task model if exists, or error if user not found
@@ -169,8 +168,8 @@ def get_task_by_id(task_id: str, session: Session) -> PyTask | Exception:
     """
     try:
         stmt = (
-            select(Task)
-            .where(and_(Task.task_id == task_id, Task.is_deleted == False))
+            select(TaskModel)
+            .where(and_(TaskModel.task_id == task_id, TaskModel.is_deleted == False))
             .limit(1)
         )
         result = session.execute(stmt)
