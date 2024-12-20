@@ -1,23 +1,46 @@
+import datetime
+import os
+from datetime import timedelta, timezone
+
 import jwt
-from datetime import datetime, timedelta
-from backend.models.dto import JWTInfo
+from dotenv import load_dotenv
+
+from backend.errors.error import InvalidJWT
+from backend.logger.logger import custom_logger
+
+load_dotenv(dotenv_path="../../.env")
+SECRET_KEY = os.getenv("SECRET_KEY")
+ALGORITHM = os.getenv("ALGORITHM")
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 
-# Secret key to sign the JWT (will move to .env after testing)
-SECRET_KEY = "somuchsecretwow"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+def create_jwt(user_id: str):
+    expiration_time = datetime.datetime.now(tz=timezone.utc) + timedelta(minutes=40)
+
+    payload = {
+        "user_id": user_id,
+        "exp": expiration_time,
+    }
+    custom_logger.info(f"payload : {payload}")
+
+    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
+    custom_logger.info(f"ENCODED : {token}")
 
 
-def create_jwt(jwt_info: JWTInfo):
-    data = vars(jwt_info)
-    expire_delta: timedelta = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-    expire = datetime.now() + expire_delta
-    data["exp"] = expire
-    print(data)
+def verify_jwt(token: str):
+    try:
+        decoded = jwt.decode(token, SECRET_KEY, algorithms=ALGORITHM)
+        print("DECODED : ", decoded)
+        return decoded
 
-    pass
+    except jwt.ExpiredSignatureError as e:
+        custom_logger.error(f"Token has expired {e}")
+        raise InvalidJWT
 
+    except jwt.DecodeError as e:
+        print(f"Decode error : {e}")
+        raise InvalidJWT
 
-def verify_jwt():
-    pass
+    except jwt.InvalidTokenError as e:
+        print(f"Invalid token: {e}")
+        raise InvalidJWT

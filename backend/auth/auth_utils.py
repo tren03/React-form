@@ -1,5 +1,6 @@
 from sqlalchemy.exc import SQLAlchemyError
 
+from backend.auth.jwt_utils import create_jwt
 from backend.errors.error import (DuplicateUserError, InvalidUserLogin,
                                   UserEntityToUserModelConversionError,
                                   UserNotFound)
@@ -19,6 +20,7 @@ def verify_login(login_dto: LoginDetailsDto, repo: IRepo) -> None:
         user_entity = repo.get_user_by_email(login_dto.email)
         if user_entity.password != login_dto.password:
             raise InvalidUserLogin
+        jwt = create_jwt(user_entity.user_id)
 
     except InvalidUserLogin as e:
         custom_logger.error("Invalid login credentials", e)
