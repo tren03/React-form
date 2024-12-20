@@ -1,39 +1,34 @@
 from fastapi import APIRouter, HTTPException, status
 
 from backend.auth.auth_utils import verify_login
+from backend.conversions.conversion_interface import IConversion
+from backend.conversions.sqlite_conversions import SqliteConversion
 from backend.db.db_connection import get_session
-from backend.errors.error import CustomError
+from backend.errors.error import CustomError, InvalidUserLogin
 from backend.logger.logger import custom_logger
 from backend.models.dto import LoginDetailsDto, UserDto
-
-# from backend.model import Task
-# from backend.db import get_db_conn
-# import sqlite3
+from backend.models.entitiy import UserEntity
+from backend.repo.repo_interface import IRepo
+from backend.repo.sqlite_repo import SqliteRepo
 
 router = APIRouter()
-sqlite_repo = 
+converter: IConversion = SqliteConversion()
+repo: IRepo = SqliteRepo(converter, get_session())
 
 
 @router.post("/signin")
-async def sign_in(obj: UserDto):
+async def sign_in(user_dto: UserDto):
     """
     Handles user sign-in by attempting to add the user to the system.
-
-    Args:
-        obj (User): The user object containing the user's credentials and other necessary data.
-
-    Returns:
-        200 response for successful signin
-
-    Raises:
-        409 duplicate user
-        401 Internal server error
     """
     try:
-        session = get_session()
-        add_user(obj, get_session())
+        # session = get_session()
+        # add_user(obj, get_session())
 
-        custom_logger.info(f"user successfully signed in {obj} ")
+        user_entity = UserEntity.user_dto_to_entity(user_dto)
+        repo.add_user(user_entity)
+
+        custom_logger.info(f"user successfully signed in {user_entity} ")
         return {"message": "successful"}
     except CustomError as e:
         custom_logger.error("error while signing new user", e)
@@ -44,24 +39,20 @@ async def sign_in(obj: UserDto):
 
 
 @router.post("/login")
-async def log_in(obj: LoginDetailsDto):
+async def log_in(login_dto: LoginDetailsDto):
     """
-    Handles user log-in by returning a jwt if verified
-
-    Args:
-        obj (LoginDetails) : Contains the email and password of the login attempt
-
-    Returns:
-        jwt token(need work)
-
-    Raises:
-        403 login failure
-
+    Handles user log-in by doing auth
     """
     try:
-        verify_login(obj)
-        custom_logger.info(f"user successfully logged in {obj} ")
+        verify_login(login_dto, repo)
+        custom_logger.info(f"user successfully logged in {login_dto} ")
         return {"message": "successful login"}
+    except InvalidUserLogin as e:
+        custom_logger.error("Wrong credentials", e)
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Server error: Could not sign in user",
+        )
     except CustomError as e:
         custom_logger.error("Error while logging in ", e)
         raise HTTPException(

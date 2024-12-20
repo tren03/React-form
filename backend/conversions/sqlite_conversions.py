@@ -1,11 +1,8 @@
 from backend.conversions.conversion_interface import IConversion
 from backend.errors.error import (  # Define this error
-    TaskDtoToTaskEntityConversionError, TaskEntityToTaskDtoConversionError,
     TaskEntityToTaskModelConversionError, TaskModelToTaskEntityConversionError,
-    UserDtoToUserEntityConversionError, UserEntityToUserDtoConversionError,
     UserEntityToUserModelConversionError, UserModelToUserEntityConversionError)
 from backend.logger.logger import custom_logger
-from backend.models.dto import TaskDto, UserDto
 from backend.models.entitiy import TaskEntity, UserEntity
 from backend.models.model import TaskModel, UserModel
 

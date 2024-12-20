@@ -3,16 +3,19 @@ from typing import Annotated
 from fastapi import APIRouter, HTTPException, status
 from fastapi.params import Body
 
-from backend.db.db_connection import get_db_conn, get_session
-from backend.db.task_operations import add_task as add_task_to_db
-from backend.db.task_operations import delete_task as delete_task_from_db
-from backend.db.task_operations import get_all_task as get_all_tasks_from_db
-from backend.db.task_operations import update_task as update_task_to_db
+from backend.conversions.conversion_interface import IConversion
+from backend.conversions.sqlite_conversions import SqliteConversion
+from backend.db.db_connection import get_session
 from backend.errors.error import CustomError, TaskNotFound, UserNotFound
 from backend.logger.logger import custom_logger
 from backend.models.dto import TaskDto, UserIdDto
+from backend.models.entitiy import TaskEntity, UserEntity
+from backend.repo.repo_interface import IRepo
+from backend.repo.sqlite_repo import SqliteRepo
 
 router = APIRouter()
+converter: IConversion = SqliteConversion()
+repo: IRepo = SqliteRepo(converter, get_session())
 
 
 @router.post("/add_task")
@@ -21,12 +24,17 @@ async def add_task(task: TaskDto, user_id: Annotated[str, Body()]):
     Takes a Task and userid and adds it to the database
     """
     try:
-        add_task_to_db(task, user_id, get_session())
-        all_tasks = get_all_tasks_from_db(user_id, get_session())
+        task_entity = TaskEntity.task_dto_to_entity(task)
+        repo.add_task(task_entity)
+        all_task_entities = repo.get_all_tasks_of_user(user_id)
+        all_task_dto = []
+        for task_entity in all_task_entities:
+            all_task_dto.append(TaskEntity.task_entity_to_dto(task_entity))
+
         custom_logger.info(
-            f"list returned after addition for user {user_id} = {all_tasks} "
+            f"list returned after addition for user {user_id} = {all_task_dto} "
         )
-        return {"task_list": all_tasks}
+        return {"task_list": all_task_dto}
 
     except UserNotFound as e:
         custom_logger.info("User not found")
@@ -51,10 +59,14 @@ async def delete_task(user_id: Annotated[str, Body()], task_id: Annotated[str, B
     """
     try:
 
-        delete_task_from_db(task_id, get_session())
-        all_tasks = get_all_tasks_from_db(user_id, get_session())
-        custom_logger.info(f"list returned after deleting task = {all_tasks} ")
-        return {"task_list": all_tasks}
+        repo.delete_task_by_id(task_id)
+        all_task_entities = repo.get_all_tasks_of_user(user_id)
+        all_task_dto = []
+        for task_entity in all_task_entities:
+            all_task_dto.append(TaskEntity.task_entity_to_dto(task_entity))
+
+        custom_logger.info(f"list returned after deleting task = {all_task_dto} ")
+        return {"task_list": all_task_dto}
 
     except TaskNotFound as e:
         custom_logger.error("task to delete not found ", e)
@@ -89,12 +101,16 @@ async def update_task(
     """
     try:
 
-        update_task_to_db(user_id, old_task_id, new_task, get_session())
-        all_tasks = get_all_tasks_from_db(user_id, get_session())
+        new_task_entity = TaskEntity.task_dto_to_entity(new_task)
+        repo.update_task_by_id(old_task_id, new_task_entity)
+        all_task_entities = repo.get_all_tasks_of_user(user_id)
+        all_task_dto = []
+        for task_entity in all_task_entities:
+            all_task_dto.append(TaskEntity.task_entity_to_dto(task_entity))
         custom_logger.info(
-            f"list returned after updating task for user {user_id} = {all_tasks} "
+            f"list returned after updating task for user {user_id} = {all_task_dto} "
         )
-        return {"task_list": all_tasks}
+        return {"task_list": all_task_dto}
 
     except TaskNotFound as e:
         custom_logger.error("task to delete not found ", e)
@@ -119,14 +135,19 @@ async def update_task(
 
 
 @router.post("/get_all_tasks")
-async def get_all_tasks(UID: UserIdDto):
+async def get_all_tasks(user_id: str):
     """
-    Given a user_id, returns all tasks of that user
+    Given a user_id, returns all tasks of that user (taskes user_id as parameter, not body)
     """
     try:
-        all_tasks = get_all_tasks_from_db(UID.user_id, get_session())
-        custom_logger.info(f"list returned for user {UID.user_id} = {all_tasks} ")
-        return {"task_list": all_tasks}
+        all_task_entities = repo.get_all_tasks_of_user(user_id)
+        all_task_dto = []
+        for task_entity in all_task_entities:
+            all_task_dto.append(TaskEntity.task_entity_to_dto(task_entity))
+        custom_logger.info(
+            f"list returned after updating task for user {user_id} = {all_task_dto} "
+        )
+        return {"task_list": all_task_dto}
 
     except UserNotFound as e:
         custom_logger.error("User whose task needs to be deleted not found", e)

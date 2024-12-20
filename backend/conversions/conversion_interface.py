@@ -21,19 +21,3 @@ class IConversion(ABC):
     @abstractmethod
     def task_model_to_entity(self, task_model: TaskModel) -> TaskEntity:
         pass
-
-    @abstractmethod
-    def user_dto_to_entity(self, user_dto: UserDto) -> UserEntity:
-        pass
-
-    @abstractmethod
-    def task_dto_to_entity(self, task_dto: TaskDto) -> TaskEntity:
-        pass
-
-    @abstractmethod
-    def user_entity_to_dto(self, user_entity: UserEntity) -> UserDto:
-        pass
-
-    @abstractmethod
-    def task_entity_to_dto(self, task_entity: TaskEntity) -> TaskDto:
-        pass

@@ -2,13 +2,11 @@ import uuid
 
 from pydantic import BaseModel
 
-from backend.conversions.conversion_interface import IConversion
 from backend.errors.error import (  # Define this error
     TaskDtoToTaskEntityConversionError, TaskEntityToTaskDtoConversionError,
     UserDtoToUserEntityConversionError, UserEntityToUserDtoConversionError)
 from backend.logger.logger import custom_logger
 from backend.models.dto import TaskDto, UserDto
-from backend.models.entitiy import TaskEntity, UserEntity
 
 
 class JWTInfoEntity(BaseModel):

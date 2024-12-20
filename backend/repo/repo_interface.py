@@ -1,9 +1,15 @@
 from abc import ABC, abstractmethod
 
+from sqlalchemy.orm import Session
+
+from backend.conversions.conversion_interface import IConversion
 from backend.models.entitiy import TaskEntity, UserEntity
 
 
 class IRepo(ABC):
+    @abstractmethod
+    def __init__(self, conversion: IConversion, session: Session):
+        pass
 
     @abstractmethod
     def add_user(self, user_to_add: UserEntity):

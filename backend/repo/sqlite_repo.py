@@ -2,6 +2,7 @@ from sqlalchemy import and_, select
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 
+from backend.conversions.conversion_interface import IConversion
 from backend.errors.error import (AlchemyToPydanticErr, DuplicateUserError,
                                   TaskEntityToTaskModelConversionError,
                                   TaskNotFound,
@@ -14,7 +15,7 @@ from backend.repo.repo_interface import IRepo
 
 
 class SqliteRepo(IRepo):
-    def __init__(self, conversion, session: Session):
+    def __init__(self, conversion: IConversion, session: Session):
         self.conversion = conversion
         self.session = session
 
@@ -29,7 +30,6 @@ class SqliteRepo(IRepo):
             user_model = self.conversion.user_entity_to_model(user_to_add)
             self.session.add(user_model)
             self.session.commit()
-            return user_model
 
         except DuplicateUserError as e:
             custom_logger.error(f"Duplicate user error: {e.message()}")
@@ -51,7 +51,6 @@ class SqliteRepo(IRepo):
             task_model = self.conversion.task_entity_to_model(task_to_add)
             self.session.add(task_model)
             self.session.commit()
-            return task_model
 
         except TaskEntityToTaskModelConversionError as e:
             custom_logger.error(

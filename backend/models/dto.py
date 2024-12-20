@@ -1,3 +1,5 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 
@@ -6,7 +8,7 @@ class UserIdDto(BaseModel):
 
 
 class TaskDto(BaseModel):
-    task_id: str | None
+    task_id: Optional[str] = None
     task_title: str
     task_description: str
     task_category: str
@@ -19,7 +21,7 @@ class LoginDetailsDto(BaseModel):
 
 
 class UserDto(BaseModel):
-    user_id: str | None
+    user_id: Optional[str] = None
     first_name: str
     last_name: str
     user_name: str
