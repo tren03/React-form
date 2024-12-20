@@ -100,7 +100,13 @@ class UserSignInDtoToUserEntityConversionError(CustomError):
         return "Couldn't convert TaskEntity to TaskDto"
 
 
-# Error for invalid or expired JWT
+# Error for expired JWT
+class ExpiredJWT(CustomError):
+    def message(self) -> str:
+        return "Couldn't convert TaskEntity to TaskDto"
+
+
+# Error for invalid JWT
 class InvalidJWT(CustomError):
     def message(self) -> str:
         return "Couldn't convert TaskEntity to TaskDto"

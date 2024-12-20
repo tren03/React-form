@@ -8,7 +8,7 @@ from backend.conversions.sqlite_conversions import SqliteConversion
 from backend.db.db_connection import get_session
 from backend.errors.error import CustomError, TaskNotFound, UserNotFound
 from backend.logger.logger import custom_logger
-from backend.models.dto import TaskDto, UserIdDto
+from backend.models.dto import TaskDto
 from backend.models.entitiy import TaskEntity, UserEntity
 from backend.repo.repo_interface import IRepo
 from backend.repo.sqlite_repo import SqliteRepo

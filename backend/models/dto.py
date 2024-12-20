@@ -3,8 +3,8 @@ from typing import Optional
 from pydantic import BaseModel
 
 
-class UserIdDto(BaseModel):
-    user_id: str
+class TokenDto(BaseModel):
+    access_token: str
 
 
 class TaskDto(BaseModel):

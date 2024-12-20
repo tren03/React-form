@@ -5,16 +5,16 @@ from datetime import timedelta, timezone
 import jwt
 from dotenv import load_dotenv
 
-from backend.errors.error import InvalidJWT
+from backend.errors.error import ExpiredJWT, InvalidJWT
 from backend.logger.logger import custom_logger
 
-load_dotenv(dotenv_path="../../.env")
+load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 
-def create_jwt(user_id: str):
+def create_jwt(user_id: str) -> str:
     expiration_time = datetime.datetime.now(tz=timezone.utc) + timedelta(minutes=40)
 
     payload = {
@@ -22,12 +22,12 @@ def create_jwt(user_id: str):
         "exp": expiration_time,
     }
     custom_logger.info(f"payload : {payload}")
-
     token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
     custom_logger.info(f"ENCODED : {token}")
+    return token
 
 
-def verify_jwt(token: str):
+def verify_jwt(token: str) -> dict:
     try:
         decoded = jwt.decode(token, SECRET_KEY, algorithms=ALGORITHM)
         print("DECODED : ", decoded)
@@ -35,7 +35,7 @@ def verify_jwt(token: str):
 
     except jwt.ExpiredSignatureError as e:
         custom_logger.error(f"Token has expired {e}")
-        raise InvalidJWT
+        raise ExpiredJWT
 
     except jwt.DecodeError as e:
         print(f"Decode error : {e}")
