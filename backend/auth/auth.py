@@ -6,7 +6,7 @@ from backend.conversions.sqlite_conversions import SqliteConversion
 from backend.db.db_connection import get_session
 from backend.errors.error import CustomError, InvalidUserLogin
 from backend.logger.logger import custom_logger
-from backend.models.dto import LoginDetailsDto, UserDto
+from backend.models.dto import LoginDetailsDto, UserDto, UserSignInDto
 from backend.models.entitiy import UserEntity
 from backend.repo.repo_interface import IRepo
 from backend.repo.sqlite_repo import SqliteRepo
@@ -17,15 +17,12 @@ repo: IRepo = SqliteRepo(converter, get_session())
 
 
 @router.post("/signin")
-async def sign_in(user_dto: UserDto):
+async def sign_in(user_sign_in_dto: UserSignInDto):
     """
     Handles user sign-in by attempting to add the user to the system.
     """
     try:
-        # session = get_session()
-        # add_user(obj, get_session())
-
-        user_entity = UserEntity.user_dto_to_entity(user_dto)
+        user_entity = UserEntity.user_sign_in_dto_to_user_entity(user_sign_in_dto)
         repo.add_user(user_entity)
 
         custom_logger.info(f"user successfully signed in {user_entity} ")

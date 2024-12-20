@@ -5,8 +5,10 @@ from sqlalchemy.orm import Session
 from backend.conversions.conversion_interface import IConversion
 from backend.errors.error import (AlchemyToPydanticErr, DuplicateUserError,
                                   TaskEntityToTaskModelConversionError,
+                                  TaskModelToTaskEntityConversionError,
                                   TaskNotFound,
                                   UserEntityToUserModelConversionError,
+                                  UserModelToUserEntityConversionError,
                                   UserNotFound)
 from backend.logger.logger import custom_logger
 from backend.models.entitiy import TaskEntity, UserEntity
@@ -21,18 +23,22 @@ class SqliteRepo(IRepo):
 
     def add_user(self, user_to_add: UserEntity):
         try:
-            # Check if the user already exists by email
-            existing_user = self.get_user_by_email(user_to_add.email)
-            if existing_user:
-                raise DuplicateUserError()
+            stmt = select(UserModel).where(UserModel.user_id == user_to_add.user_id)
+            result = self.session.execute(stmt)
+            user = result.scalars().first()
 
-            # Convert UserEntity to UserModel and add to DB
+            if user:
+                raise DuplicateUserError
+
             user_model = self.conversion.user_entity_to_model(user_to_add)
             self.session.add(user_model)
             self.session.commit()
 
         except DuplicateUserError as e:
-            custom_logger.error(f"Duplicate user error: {e.message()}")
+            custom_logger.error(e.message())
+
+        except UserModelToUserEntityConversionError as e:
+            custom_logger.error(e.message())
             raise e
 
         except UserEntityToUserModelConversionError as e:
@@ -78,11 +84,8 @@ class SqliteRepo(IRepo):
                 f"User not found for id {user_id_to_search}: {e.message()}"
             )
             raise e
-
-        except AlchemyToPydanticErr as e:
-            custom_logger.error(
-                f"Error converting UserModel to UserEntity: {e.message()}"
-            )
+        except UserModelToUserEntityConversionError as e:
+            custom_logger.error(e.message())
             raise e
 
         except SQLAlchemyError as e:
@@ -154,8 +157,14 @@ class SqliteRepo(IRepo):
             result = self.session.execute(stmt)
             tasks = result.scalars().all()
 
+            custom_logger.info(f"reached get_all_tasks tasks found = {tasks}")
+
             if tasks:
+                custom_logger.info(
+                    f"list generated for user{user_id_to_search} : {tasks}"
+                )
                 return [self.conversion.task_model_to_entity(task) for task in tasks]
+
             else:
                 raise TaskNotFound()
 
@@ -165,10 +174,8 @@ class SqliteRepo(IRepo):
             )
             raise e
 
-        except AlchemyToPydanticErr as e:
-            custom_logger.error(
-                f"Error converting TaskModel to TaskEntity: {e.message()}"
-            )
+        except TaskModelToTaskEntityConversionError as e:
+            custom_logger.error(e.message())
             raise e
 
         except SQLAlchemyError as e:

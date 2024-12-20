@@ -43,7 +43,7 @@ class PydanticToAlchemyErr(CustomError):
 
 class TaskNotFound(CustomError):
     def message(self) -> str:
-        return "User not found"
+        return "task not found"
 
 
 # Error for UserEntity to UserModel conversion
@@ -51,38 +51,50 @@ class UserEntityToUserModelConversionError(CustomError):
     def message(self) -> str:
         return "Couldn't convert UserEntity to UserModel"
 
+
 # Error for TaskEntity to TaskModel conversion
 class TaskEntityToTaskModelConversionError(CustomError):
     def message(self) -> str:
         return "Couldn't convert TaskEntity to TaskModel"
+
 
 # Error for UserModel to UserEntity conversion
 class UserModelToUserEntityConversionError(CustomError):
     def message(self) -> str:
         return "Couldn't convert UserModel to UserEntity"
 
+
 # Error for TaskModel to TaskEntity conversion
 class TaskModelToTaskEntityConversionError(CustomError):
     def message(self) -> str:
         return "Couldn't convert TaskModel to TaskEntity"
+
 
 # Error for UserDto to UserEntity conversion
 class UserDtoToUserEntityConversionError(CustomError):
     def message(self) -> str:
         return "Couldn't convert UserDto to UserEntity"
 
+
 # Error for TaskDto to TaskEntity conversion
 class TaskDtoToTaskEntityConversionError(CustomError):
     def message(self) -> str:
         return "Couldn't convert TaskDto to TaskEntity"
+
 
 # Error for UserEntity to UserDto conversion
 class UserEntityToUserDtoConversionError(CustomError):
     def message(self) -> str:
         return "Couldn't convert UserEntity to UserDto"
 
+
 # Error for TaskEntity to TaskDto conversion
 class TaskEntityToTaskDtoConversionError(CustomError):
     def message(self) -> str:
         return "Couldn't convert TaskEntity to TaskDto"
 
+
+# Error for TaskEntity to TaskDto conversion
+class UserSignInDtoToUserEntityConversionError(CustomError):
+    def message(self) -> str:
+        return "Couldn't convert TaskEntity to TaskDto"

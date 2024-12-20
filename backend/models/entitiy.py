@@ -4,9 +4,10 @@ from pydantic import BaseModel
 
 from backend.errors.error import (  # Define this error
     TaskDtoToTaskEntityConversionError, TaskEntityToTaskDtoConversionError,
-    UserDtoToUserEntityConversionError, UserEntityToUserDtoConversionError)
+    UserEntityToUserDtoConversionError,
+    UserSignInDtoToUserEntityConversionError)
 from backend.logger.logger import custom_logger
-from backend.models.dto import TaskDto, UserDto
+from backend.models.dto import TaskDto, UserDto, UserSignInDto
 
 
 class JWTInfoEntity(BaseModel):
@@ -36,34 +37,35 @@ class UserEntity(BaseModel):
                 user_name=user_entity.user_name,
                 email=user_entity.email,
                 phone=user_entity.phone,
-                password=user_entity.password,
             )
         except Exception as e:
             custom_logger.error(f"Error during UserEntity to UserDto conversion: {e}")
-            raise UserEntityToUserDtoConversionError()
+            raise UserEntityToUserDtoConversionError
 
     @staticmethod
-    def user_dto_to_entity(user_dto: UserDto) -> "UserEntity":
+    def user_sign_in_dto_to_user_entity(
+        user_sign_in_dto: UserSignInDto,
+    ) -> "UserEntity":
         """
         Converts a UserDto (Pydantic DTO) to a UserEntity
         """
         try:
-            if not user_dto.user_id:
+            if not user_sign_in_dto.user_id:
                 generated_user_id = str(uuid.uuid4())
             else:
-                generated_user_id = user_dto.user_id
+                generated_user_id = user_sign_in_dto.user_id
             return UserEntity(
                 user_id=generated_user_id,
-                first_name=user_dto.first_name,
-                last_name=user_dto.last_name,
-                user_name=user_dto.user_name,
-                email=user_dto.email,
-                phone=user_dto.phone,
-                password=user_dto.password,
+                first_name=user_sign_in_dto.first_name,
+                last_name=user_sign_in_dto.last_name,
+                user_name=user_sign_in_dto.user_name,
+                email=user_sign_in_dto.email,
+                phone=user_sign_in_dto.phone,
+                password=user_sign_in_dto.password,
             )
         except Exception as e:
             custom_logger.error(f"Error during UserDto to UserEntity conversion: {e}")
-            raise UserDtoToUserEntityConversionError()
+            raise UserSignInDtoToUserEntityConversionError
 
 
 class TaskEntity(BaseModel):

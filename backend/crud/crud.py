@@ -140,12 +140,14 @@ async def get_all_tasks(user_id: str):
     Given a user_id, returns all tasks of that user (taskes user_id as parameter, not body)
     """
     try:
+        custom_logger.info(f"user_id requested : {user_id}")
         all_task_entities = repo.get_all_tasks_of_user(user_id)
         all_task_dto = []
         for task_entity in all_task_entities:
             all_task_dto.append(TaskEntity.task_entity_to_dto(task_entity))
+
         custom_logger.info(
-            f"list returned after updating task for user {user_id} = {all_task_dto} "
+            f"list returned after addition for user {user_id} = {all_task_dto} "
         )
         return {"task_list": all_task_dto}
 
@@ -155,6 +157,9 @@ async def get_all_tasks(user_id: str):
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"user not found",
         )
+
+    except TaskNotFound as e:
+        return {"task_list": []}
 
     except CustomError as e:
         custom_logger.error("err during deletion of task ", e)

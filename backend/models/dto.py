@@ -20,7 +20,7 @@ class LoginDetailsDto(BaseModel):
     password: str
 
 
-class UserDto(BaseModel):
+class UserSignInDto(BaseModel):
     user_id: Optional[str] = None
     first_name: str
     last_name: str
@@ -28,3 +28,12 @@ class UserDto(BaseModel):
     email: str
     phone: str
     password: str
+
+
+class UserDto(BaseModel):
+    user_id: Optional[str] = None
+    first_name: str
+    last_name: str
+    user_name: str
+    email: str
+    phone: str

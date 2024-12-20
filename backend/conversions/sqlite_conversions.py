@@ -37,6 +37,7 @@ class SqliteConversion(IConversion):
                 task_title=task_entity.task_title,
                 task_description=task_entity.task_description,
                 task_category=task_entity.task_category,
+                user_id=task_entity.user_id,
             )
         except Exception as e:
             custom_logger.error(f"Error during TaskEntity to TaskModel conversion: {e}")

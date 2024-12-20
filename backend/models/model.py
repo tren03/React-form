@@ -55,7 +55,7 @@ class TaskModel(Base):
     task_title:string
     task_description:string
     task_category:string
-    user_id:int -> FK to user table
+    user_id:str -> FK to user table
 
     """
 
