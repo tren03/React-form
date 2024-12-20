@@ -1,22 +1,21 @@
 from fastapi import APIRouter, HTTPException, status
-from starlette.status import HTTP_401_UNAUTHORIZED, HTTP_403_FORBIDDEN
+
 from backend.auth.auth_utils import verify_login
-from backend.auth.jwt_utils import create_jwt
-from backend.db.user_operations import add_user, get_user_by_email
-from backend.errors.error import CustomError, DuplicateUserError, UserNotFound
-from backend.models.model import JWTInfo, LoginDetails, PyUser
 from backend.db.db_connection import get_session
+from backend.errors.error import CustomError
 from backend.logger.logger import custom_logger
+from backend.models.dto import LoginDetailsDto, UserDto
 
 # from backend.model import Task
 # from backend.db import get_db_conn
 # import sqlite3
 
 router = APIRouter()
+sqlite_repo = 
 
 
 @router.post("/signin")
-async def sign_in(obj: PyUser):
+async def sign_in(obj: UserDto):
     """
     Handles user sign-in by attempting to add the user to the system.
 
@@ -31,7 +30,9 @@ async def sign_in(obj: PyUser):
         401 Internal server error
     """
     try:
+        session = get_session()
         add_user(obj, get_session())
+
         custom_logger.info(f"user successfully signed in {obj} ")
         return {"message": "successful"}
     except CustomError as e:
@@ -43,7 +44,7 @@ async def sign_in(obj: PyUser):
 
 
 @router.post("/login")
-async def log_in(obj: LoginDetails):
+async def log_in(obj: LoginDetailsDto):
     """
     Handles user log-in by returning a jwt if verified
 

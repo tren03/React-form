@@ -1,24 +1,23 @@
 from pydantic import ValidationError
 from sqlalchemy.exc import SQLAlchemyError
-from backend.db.migrations import User
-from backend.db.migrations import Task
+from backend.db.migrations import UserModel
+from backend.db.migrations import TaskModel
 from backend.errors.error import (
     AlchemyToPydanticErr,
     PydanticToAlchemyErr,
 )
-from backend.models.model import PyUser as PyUser
-from backend.models.model import PyTask as PyTask
+from backend.models.dto import UserDto,TaskDto
 from backend.logger.logger import custom_logger
 import uuid
 
 
-def user_alchemy_to_pydantic(alchemy_user: User) -> PyUser | None:
+def user_alchemy_to_pydantic(alchemy_user: UserModel) -> UserDto | None:
     """
     Takes sqlalchemy user object and converts to pydantic user model
     Returns custom error - AlchemyToPydanticErr if the conversion fails.
     """
     try:
-        pydantic_user = PyUser(
+        pydantic_user = UserDto(
             first_name=alchemy_user.first_name,
             last_name=alchemy_user.last_name,
             user_name=alchemy_user.user_name,
@@ -35,13 +34,13 @@ def user_alchemy_to_pydantic(alchemy_user: User) -> PyUser | None:
         raise AlchemyToPydanticErr
 
 
-def new_user_pydantic_to_alchemy(pydantic_user: PyUser) -> User | None:
+def new_user_pydantic_to_alchemy(pydantic_user: UserDto) -> UserModel | None:
     """
     Takes pydantic user object and converts to sqlalchemy user model and returns a new PyUser object
     raises custom error - PydanticToAlchemyErr if the conversion fails.
     """
     try:
-        sql_alchemy_user = User(
+        sql_alchemy_user = UserModel(
             user_id=str(uuid.uuid4()),
             first_name=pydantic_user.first_name,
             last_name=pydantic_user.last_name,
@@ -81,13 +80,13 @@ def new_user_pydantic_to_alchemy(pydantic_user: PyUser) -> User | None:
 #
 
 
-def task_alchemy_to_pydantic(alchemy_task: Task) -> PyTask:
+def task_alchemy_to_pydantic(alchemy_task: TaskModel) -> TaskDto:
     """
     Takes sqlalchemy task object and converts to pydantic task model
     error AlchemyToPydanticErr
     """
     try:
-        pydantic_task = PyTask(
+        pydantic_task = TaskDto(
             task_title=alchemy_task.task_title,
             task_description=alchemy_task.task_description,
             task_category=alchemy_task.task_category,
@@ -101,13 +100,13 @@ def task_alchemy_to_pydantic(alchemy_task: Task) -> PyTask:
         raise AlchemyToPydanticErr
 
 
-def new_task_pydantic_to_alchemy(pydantic_task: PyTask, user_id: str) -> Task:
+def new_task_pydantic_to_alchemy(pydantic_task: TaskDto, user_id: str) -> TaskModel:
     """
     Takes pydantic task object and user_id(foreign key) and converts to sqlalchemy task model.
     Returns custom error - PydanticToAlchemyErr if the conversion fails.
     """
     try:
-        sql_alchemy_task = Task(
+        sql_alchemy_task = TaskModel(
             task_id=str(uuid.uuid4()),
             task_title=pydantic_task.task_title,
             task_description=pydantic_task.task_description,

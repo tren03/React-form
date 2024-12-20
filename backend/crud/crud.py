@@ -1,24 +1,22 @@
+from typing import Annotated
+
 from fastapi import APIRouter, HTTPException, status
 from fastapi.params import Body
-from backend.errors.error import CustomError, TaskNotFound, UserNotFound
-from backend.models.model import PyTask, UserID
+
 from backend.db.db_connection import get_db_conn, get_session
-from backend.db.task_operations import (
-    add_task as add_task_to_db,
-    get_all_task as get_all_tasks_from_db,
-    delete_task as delete_task_from_db,
-    update_task as update_task_to_db,
-)
+from backend.db.task_operations import add_task as add_task_to_db
+from backend.db.task_operations import delete_task as delete_task_from_db
+from backend.db.task_operations import get_all_task as get_all_tasks_from_db
+from backend.db.task_operations import update_task as update_task_to_db
+from backend.errors.error import CustomError, TaskNotFound, UserNotFound
 from backend.logger.logger import custom_logger
-
-
-from typing import Annotated
+from backend.models.dto import TaskDto, UserIdDto
 
 router = APIRouter()
 
 
 @router.post("/add_task")
-async def add_task(task: PyTask, user_id: Annotated[str, Body()]):
+async def add_task(task: TaskDto, user_id: Annotated[str, Body()]):
     """
     Takes a Task and userid and adds it to the database
     """
@@ -84,7 +82,7 @@ async def delete_task(user_id: Annotated[str, Body()], task_id: Annotated[str, B
 async def update_task(
     user_id: Annotated[str, Body()],
     old_task_id: Annotated[str, Body()],
-    new_task: PyTask,
+    new_task: TaskDto,
 ):
     """
     Takes a user_id, old_task_id, and a new_task  ,sets the delete flag to true on old_task and adds new task and returns all tasks
@@ -121,7 +119,7 @@ async def update_task(
 
 
 @router.post("/get_all_tasks")
-async def get_all_tasks(UID: UserID):
+async def get_all_tasks(UID: UserIdDto):
     """
     Given a user_id, returns all tasks of that user
     """

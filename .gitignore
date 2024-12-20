@@ -26,4 +26,5 @@ yarn-error.log*
 __pycache__/
 backend/__pycache__
 *.db
+backend.logs
 

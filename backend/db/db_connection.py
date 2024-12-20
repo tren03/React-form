@@ -1,8 +1,8 @@
 import sqlite3
 from sqlite3.dbapi2 import Error
-from sqlalchemy import Engine, create_engine
-from sqlalchemy.orm import sessionmaker, Session
 
+from sqlalchemy import Engine, create_engine
+from sqlalchemy.orm import Session, sessionmaker
 
 DB_URL = "sqlite:///test.db"
 

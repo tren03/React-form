@@ -1,12 +1,13 @@
 from backend.auth.jwt_utils import create_jwt
 from backend.db.user_operations import get_user_by_email
-from backend.errors.error import AlchemyToPydanticErr, InvalidUserLogin, UserNotFound
-from backend.models.model import JWTInfo, LoginDetails
+from backend.errors.error import (AlchemyToPydanticErr, InvalidUserLogin,
+                                  UserNotFound)
 from backend.logger.logger import custom_logger
+from backend.models.dto import LoginDetailsDto
 
 
 # should return jwt for user, for now returning None
-def verify_login(obj: LoginDetails) -> None:
+def verify_login(obj: LoginDetailsDto) -> None:
     """
     We check if the email and password exist in the database and are valid
     """

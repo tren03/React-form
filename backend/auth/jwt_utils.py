@@ -1,6 +1,6 @@
 import jwt
 from datetime import datetime, timedelta
-from backend.models.model import JWTInfo
+from backend.models.dto import JWTInfo
 
 
 # Secret key to sign the JWT (will move to .env after testing)
