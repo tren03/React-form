@@ -1,8 +1,9 @@
 from typing import Annotated
 
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.params import Body
 
+from backend.auth.jwt_utils import get_current_user
 from backend.errors.error import CustomError, TaskNotFound, UserNotFound
 from backend.logger.logger import custom_logger
 from backend.models.dto import TaskDto
@@ -14,12 +15,12 @@ repo = get_repo()
 
 
 @router.post("/add_task")
-async def add_task(task: TaskDto, user_id: Annotated[str, Body()]):
+async def add_task(task: TaskDto, user_id: Annotated[str, Depends(get_current_user)]):
     """
     Takes a Task and userid and adds it to the database
     """
     try:
-        task_entity = TaskEntity.task_dto_to_entity(task)
+        task_entity = TaskEntity.task_dto_to_entity(task, user_id)
         repo.add_task(task_entity)
         all_task_entities = repo.get_all_tasks_of_user(user_id)
         all_task_dto = []
@@ -48,7 +49,9 @@ async def add_task(task: TaskDto, user_id: Annotated[str, Body()]):
 
 # for now we take user_id, but after jwt, we get user_id from there
 @router.post("/delete_task")
-async def delete_task(user_id: Annotated[str, Body()], task_id: Annotated[str, Body()]):
+async def delete_task(
+    user_id: Annotated[str, Depends(get_current_user)], task_id: Annotated[str, Body()]
+):
     """
     Takes a task_id and sets the delete flag to true
     """
@@ -87,7 +90,7 @@ async def delete_task(user_id: Annotated[str, Body()], task_id: Annotated[str, B
 
 @router.post("/update_task")
 async def update_task(
-    user_id: Annotated[str, Body()],
+    user_id: Annotated[str, Depends(get_current_user)],
     old_task_id: Annotated[str, Body()],
     new_task: TaskDto,
 ):
@@ -96,7 +99,7 @@ async def update_task(
     """
     try:
 
-        new_task_entity = TaskEntity.task_dto_to_entity(new_task)
+        new_task_entity = TaskEntity.task_dto_to_entity(new_task, user_id)
         repo.update_task_by_id(old_task_id, new_task_entity)
         all_task_entities = repo.get_all_tasks_of_user(user_id)
         all_task_dto = []
@@ -130,7 +133,7 @@ async def update_task(
 
 
 @router.post("/get_all_tasks")
-async def get_all_tasks(user_id: str):
+async def get_all_tasks(user_id: Annotated[str, Depends(get_current_user)]):
     """
     Given a user_id, returns all tasks of that user (taskes user_id as parameter, not body)
     """

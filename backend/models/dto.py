@@ -12,7 +12,7 @@ class TaskDto(BaseModel):
     task_title: str
     task_description: str
     task_category: str
-    user_id: str
+    # user_id: str
 
 
 class LoginDetailsDto(BaseModel):

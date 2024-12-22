@@ -75,5 +75,5 @@ async def log_in(form_data: OAuth2PasswordRequestForm = Depends()):
 
 
 @router.get("/items/me")
-async def read_items(payload: Annotated[dict, Depends(get_current_user)]):
-    return payload
+async def read_items(user_id: Annotated[str, Depends(get_current_user)]):
+    return {"user_id": user_id}

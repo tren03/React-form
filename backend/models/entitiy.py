@@ -86,14 +86,13 @@ class TaskEntity(BaseModel):
                 task_title=task_entity.task_title,
                 task_description=task_entity.task_description,
                 task_category=task_entity.task_category,
-                user_id=task_entity.user_id,
             )
         except Exception as e:
             custom_logger.error(f"Error during TaskEntity to TaskDto conversion: {e}")
             raise TaskEntityToTaskDtoConversionError()
 
     @staticmethod
-    def task_dto_to_entity(task_dto: TaskDto) -> "TaskEntity":
+    def task_dto_to_entity(task_dto: TaskDto, user_id: str) -> "TaskEntity":
         """
         Converts a TaskDto (Pydantic DTO) to a TaskEntity
         """
@@ -107,7 +106,7 @@ class TaskEntity(BaseModel):
                 task_title=task_dto.task_title,
                 task_description=task_dto.task_description,
                 task_category=task_dto.task_category,
-                user_id=task_dto.user_id,
+                user_id=user_id,
             )
         except Exception as e:
             custom_logger.error(f"Error during TaskDto to TaskEntity conversion: {e}")
