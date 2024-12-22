@@ -152,7 +152,7 @@ async function sendDetails(deets) {
       email: deets.email,
       password: deets.password,
     };
-    const response = await fetch(`${backendAddr}/auth/signin`, {
+    const response = await fetch(`${backendAddr}/v1/auth/signin`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -351,3 +351,1177 @@ INFO:DECODED :
 INFO:reached get_all_tasks tasks found = [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
 INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
 INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd', task_title='string', task_description='string', task_category='Low Priority'), TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='64c7836e-1dce-4cd2-b617-d5f27d21ee9f', task_title='from frontedn', task_description='from fronted low pr', task_category='Low Priority')] 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 6, 51, 94823, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODcyODExfQ.UJ1iLeYTXj5AU7tWjojYGjPDrr1CJl6qszOe4RAz71Q
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 7, 47, 768252, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODcyODY3fQ.3RlToPf-zp6k6Pc5Jp7SeDymJpzK1WGWDlaNUa9eW-g
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:39]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+ERROR:Invalid login attempt: 
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 9, 8, 990784, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODcyOTQ4fQ.YVPq6Ol0FxENtWN51e0Gmqkjc5azRTpqDh8lSs5k9Dc
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 9, 44, 952055, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODcyOTg0fQ.DmtlBDFU4vb6Z-YsZokce3in5VecPIyPZnKSXa6_3sI
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 10, 1, 43376, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODczMDAxfQ.ymCKC8iLi73uBD7yCDQo1BPOgOU3H3O6oEYoAwhmv7w
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 11, 28, 790751, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODczMDg4fQ.7EDxa2XJWtDJ-vNHQ9YCRHIDVrR19bIC8WRhnkhr9oc
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 13, 12, 649953, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODczMTkyfQ.jPVD_WZ7dY-QqI7FJBfUhr_EG5EgmSBLiWjlxhIxots
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 14, 20, 593221, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODczMjYwfQ.Z6kGUsuFH54p122a8LGbK14x0Uxv0sLBe4nnfipBy14
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'ajs_anonymous_id': '8c647148-f58b-4534-b282-5537a520f3af'}
+INFO:{'ajs_anonymous_id': '8c647148-f58b-4534-b282-5537a520f3af'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 17, 7, 732996, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODczNDI3fQ.m5j4leJzPl2m57mry8_00x-xYxXbblj88Srz-129Vg0
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 18, 26, 530001, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODczNTA2fQ.8HdQ4ifzhtIz3JGX1yOq8WO2ZVF2hn2Mdqb56xGXyS0
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 20, 46, 214670, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODczNjQ2fQ.hQoDTvIOp_olEt7WrHcNjJY4TR12A_YggD9wzAhFcUI
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 23, 31, 261699, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODczODExfQ.9qqU-7q98RU-HWo8S_gTSLj6uWoGZ1UHRQ8uboKHJmY
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 24, 2, 821449, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODczODQyfQ.3fWCi5MCzXsj8hM3-tozsCS6rcBus8dnkFMvbiMFjqQ
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 29, 13, 508859, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MTUzfQ.hMgwhAx90Wngwd4GVpPnSq_LncLI5UO6rMcQ4HWTqek
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 30, 17, 810802, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MjE3fQ.H5bmiIbCvUdzTnLi30Bj6kOKVV36W2H45euseVYd1_Y
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 30, 59, 288862, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MjU5fQ.ZN3jInmxJ-eRfVZkZh1aDjqLKvREC77aeHIf9eS7UBI
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 32, 5, 552355, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MzI1fQ.L9UcL2MZLLO5bhNA7V0GUfmgB3aadbBHU_sYZPEAMJo
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 32, 16, 868254, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MzM2fQ.PkvOBbloVdm583yFa52t2x_E_ied_a_6Kti8mMUz6-Q
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 32, 17, 557057, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MzM3fQ.n70LSPUmJgeoQSInEEl9R7L3HCzSYjWmQi_vTwCA79Y
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 32, 17, 706559, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MzM3fQ.n70LSPUmJgeoQSInEEl9R7L3HCzSYjWmQi_vTwCA79Y
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 32, 17, 855441, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MzM3fQ.n70LSPUmJgeoQSInEEl9R7L3HCzSYjWmQi_vTwCA79Y
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 32, 17, 991364, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MzM3fQ.n70LSPUmJgeoQSInEEl9R7L3HCzSYjWmQi_vTwCA79Y
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 32, 18, 127948, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MzM4fQ.czwTLJlGP3w5b-OEnHzs-rd7PchfmGJGLSkesuGhCeQ
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 32, 18, 246453, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MzM4fQ.czwTLJlGP3w5b-OEnHzs-rd7PchfmGJGLSkesuGhCeQ
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 32, 18, 383342, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MzM4fQ.czwTLJlGP3w5b-OEnHzs-rd7PchfmGJGLSkesuGhCeQ
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 32, 18, 538193, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MzM4fQ.czwTLJlGP3w5b-OEnHzs-rd7PchfmGJGLSkesuGhCeQ
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 32, 25, 666848, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0MzQ1fQ.RlhRdOHXS76xdO8UYob3F-3adi49xKC1GF7Cbj56E2Y
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 33, 6, 892643, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0Mzg2fQ.alw4tUbCnPw3SGOgnDWlFW1noq47yb0uimd3MKtJ_KU
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{'_streamlit_xsrf': '2|0effb6af|f98b32945265e7cd57600e60e3a8406a|1733556461'}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 34, 22, 791835, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0NDYyfQ.POTbGVLbcRNPhMdTmD2j5k9MM6IWmzkZY7YmyCMoxqw
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{}
+INFO:{}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:40]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+ERROR:Invalid login attempt: 
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:40]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+ERROR:Invalid login attempt: 
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:40]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+ERROR:Invalid login attempt: 
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 36, 50, 617306, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0NjEwfQ.QyIIy1v7OkOomHxG3vjdo9D4FxtwXZ-E5fJNNpxvWz4
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{}
+INFO:{}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 37, 26, 535293, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0NjQ2fQ.2dWOaW3KyjbThMAral3sQytKiPlcg0vftMAGcg9gEuI
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{}
+INFO:{}
+INFO:{}
+INFO:{}
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 43, 12, 255757, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0OTkyfQ.UYJ7KYF1NOAhQRGuYYz5Fhwn1y-9HNGjkxf0Al13Nr0
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0OTkyfQ.UYJ7KYF1NOAhQRGuYYz5Fhwn1y-9HNGjkxf0Al13Nr0'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd', task_title='string', task_description='string', task_category='Low Priority'), TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='64c7836e-1dce-4cd2-b617-d5f27d21ee9f', task_title='from frontedn', task_description='from fronted low pr', task_category='Low Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc0OTkyfQ.UYJ7KYF1NOAhQRGuYYz5Fhwn1y-9HNGjkxf0Al13Nr0'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd', task_title='string', task_description='string', task_category='Low Priority'), TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='64c7836e-1dce-4cd2-b617-d5f27d21ee9f', task_title='from frontedn', task_description='from fronted low pr', task_category='Low Priority')] 
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 44, 3, 67692, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MDQzfQ.ye288bJiHaRjZ4aUP5Bn20qOiEqnjyWnSNYWyTW48TA
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MDQzfQ.ye288bJiHaRjZ4aUP5Bn20qOiEqnjyWnSNYWyTW48TA'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd', task_title='string', task_description='string', task_category='Low Priority'), TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='64c7836e-1dce-4cd2-b617-d5f27d21ee9f', task_title='from frontedn', task_description='from fronted low pr', task_category='Low Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MDQzfQ.ye288bJiHaRjZ4aUP5Bn20qOiEqnjyWnSNYWyTW48TA'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd', task_title='string', task_description='string', task_category='Low Priority'), TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='64c7836e-1dce-4cd2-b617-d5f27d21ee9f', task_title='from frontedn', task_description='from fronted low pr', task_category='Low Priority')] 
+INFO:{}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:18]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[19:27]
+DEBUG:Calling on_field_data with data[28:37]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 44, 11, 192596, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MDUxfQ.CkqWY2c7YQuGMkKgrYRUvI4Q0vQmYFldNUjInJ68ZyE
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MDUxfQ.CkqWY2c7YQuGMkKgrYRUvI4Q0vQmYFldNUjInJ68ZyE'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd', task_title='string', task_description='string', task_category='Low Priority'), TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='64c7836e-1dce-4cd2-b617-d5f27d21ee9f', task_title='from frontedn', task_description='from fronted low pr', task_category='Low Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MDUxfQ.CkqWY2c7YQuGMkKgrYRUvI4Q0vQmYFldNUjInJ68ZyE'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd', task_title='string', task_description='string', task_category='Low Priority'), TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='64c7836e-1dce-4cd2-b617-d5f27d21ee9f', task_title='from frontedn', task_description='from fronted low pr', task_category='Low Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MDUxfQ.CkqWY2c7YQuGMkKgrYRUvI4Q0vQmYFldNUjInJ68ZyE'}
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MDUxfQ.CkqWY2c7YQuGMkKgrYRUvI4Q0vQmYFldNUjInJ68ZyE'}
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MDUxfQ.CkqWY2c7YQuGMkKgrYRUvI4Q0vQmYFldNUjInJ68ZyE'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:10]
+DEBUG:Calling on_field_data with data[11:19]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[20:28]
+DEBUG:Calling on_field_data with data[29:38]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[39:47]
+DEBUG:Calling on_field_data with data[48:57]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[58:63]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[65:74]
+DEBUG:Calling on_field_data with data[75:81]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[82:95]
+DEBUG:Calling on_field_data with data[96:102]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '9df10483-7a4e-414e-9913-611a4db6637d', 'exp': datetime.datetime(2024, 12, 22, 13, 46, 40, 239676, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4
+INFO:user successfully logged in email='q@w.com' password='asQW12@' 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd, title=string, description=string, category=Low Priority), Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd', task_title='string', task_description='string', task_category='Low Priority'), TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='64c7836e-1dce-4cd2-b617-d5f27d21ee9f', task_title='from frontedn', task_description='from fronted low pr', task_category='Low Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+ERROR:SQLAlchemy error during addition of task: (sqlite3.IntegrityError) UNIQUE constraint failed: tasksv2.task_id
+[SQL: INSERT INTO tasksv2 (task_id, task_title, task_description, task_category, user_id, is_deleted) VALUES (?, ?, ?, ?, ?, ?) RETURNING time_created, time_updated]
+[parameters: ('b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd', 'updatedn string', 'string', 'High Priority', '9df10483-7a4e-414e-9913-611a4db6637d', 0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+ERROR:SQLAlchemy error while updating task: (sqlite3.IntegrityError) UNIQUE constraint failed: tasksv2.task_id
+[SQL: INSERT INTO tasksv2 (task_id, task_title, task_description, task_category, user_id, is_deleted) VALUES (?, ?, ?, ?, ?, ?) RETURNING time_created, time_updated]
+[parameters: ('b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd', 'updatedn string', 'string', 'High Priority', '9df10483-7a4e-414e-9913-611a4db6637d', 0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+ERROR:SQLAlchemy error while updating task: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) UNIQUE constraint failed: tasksv2.task_id
+[SQL: INSERT INTO tasksv2 (task_id, task_title, task_description, task_category, user_id, is_deleted) VALUES (?, ?, ?, ?, ?, ?) RETURNING time_created, time_updated]
+[parameters: ('b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd', 'updatedn string', 'string', 'High Priority', '9df10483-7a4e-414e-9913-611a4db6637d', 0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) (Background on this error at: https://sqlalche.me/e/20/7s2a)
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+ERROR:Task not found for update with ID b35e1f14-ddaa-4f9f-b448-0c6f93f60dbd: task not found
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=64c7836e-1dce-4cd2-b617-d5f27d21ee9f, title=from frontedn, description=from fronted low pr, category=Low Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='64c7836e-1dce-4cd2-b617-d5f27d21ee9f', task_title='from frontedn', task_description='from fronted low pr', task_category='Low Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=96acb6ae-0b5f-4dc9-bbcb-46390e20fed3, title=updatedn string, description=string, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=96acb6ae-0b5f-4dc9-bbcb-46390e20fed3, title=updatedn string, description=string, category=High Priority)]
+INFO:list returned after updating task for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='96acb6ae-0b5f-4dc9-bbcb-46390e20fed3', task_title='updatedn string', task_description='string', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list returned after updating task for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='eafabf0d-4d8e-4a2a-b373-28092f39015e', task_title='new', task_description='string', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='eafabf0d-4d8e-4a2a-b373-28092f39015e', task_title='new', task_description='string', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='eafabf0d-4d8e-4a2a-b373-28092f39015e', task_title='new', task_description='string', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='eafabf0d-4d8e-4a2a-b373-28092f39015e', task_title='new', task_description='string', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='eafabf0d-4d8e-4a2a-b373-28092f39015e', task_title='new', task_description='string', task_category='High Priority')] 
+INFO:{}
+INFO:{}
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='eafabf0d-4d8e-4a2a-b373-28092f39015e', task_title='new', task_description='string', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='eafabf0d-4d8e-4a2a-b373-28092f39015e', task_title='new', task_description='string', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='eafabf0d-4d8e-4a2a-b373-28092f39015e', task_title='new', task_description='string', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='eafabf0d-4d8e-4a2a-b373-28092f39015e', task_title='new', task_description='string', task_category='High Priority')] 
+INFO:{}
+INFO:{}
+INFO:{}
+INFO:{}
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='eafabf0d-4d8e-4a2a-b373-28092f39015e', task_title='new', task_description='string', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=eafabf0d-4d8e-4a2a-b373-28092f39015e, title=new, description=string, category=High Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='eafabf0d-4d8e-4a2a-b373-28092f39015e', task_title='new', task_description='string', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=a11ae30c-8fa0-4bdc-a048-11500e081597, title=new -new, description=stringvery new, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=a11ae30c-8fa0-4bdc-a048-11500e081597, title=new -new, description=stringvery new, category=High Priority)]
+INFO:list returned after updating task for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='a11ae30c-8fa0-4bdc-a048-11500e081597', task_title='new -new', task_description='stringvery new', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=a11ae30c-8fa0-4bdc-a048-11500e081597, title=new -new, description=stringvery new, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=fabc07a0-4ed4-42df-be8c-2c551ef4f403, title=veryg, description=string, category=Low Priority), Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=a11ae30c-8fa0-4bdc-a048-11500e081597, title=new -new, description=stringvery new, category=High Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='fabc07a0-4ed4-42df-be8c-2c551ef4f403', task_title='veryg', task_description='string', task_category='Low Priority'), TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='a11ae30c-8fa0-4bdc-a048-11500e081597', task_title='new -new', task_description='stringvery new', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=a11ae30c-8fa0-4bdc-a048-11500e081597, title=new -new, description=stringvery new, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority), Task(id=a11ae30c-8fa0-4bdc-a048-11500e081597, title=new -new, description=stringvery new, category=High Priority)]
+INFO:list returned after deleting task = [TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority'), TaskDto(task_id='a11ae30c-8fa0-4bdc-a048-11500e081597', task_title='new -new', task_description='stringvery new', task_category='High Priority')] 
+INFO:{}
+INFO:{}
+INFO:{}
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:{}
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority), Task(id=bc0a6b5f-14bd-40c2-a836-964d923eda18, title=aadsfads, description=adsfasd, category=High Priority)]
+INFO:list returned after deleting task = [TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority'), TaskDto(task_id='bc0a6b5f-14bd-40c2-a836-964d923eda18', task_title='aadsfads', task_description='adsfasd', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority)]
+INFO:list returned after deleting task = [TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:user_id requested : 9df10483-7a4e-414e-9913-611a4db6637d
+INFO:reached get_all_tasks tasks found = [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=a6474041-701d-47f8-8705-1a3f8b80baec, title=very cool, description=dfadfasd, category=Medium Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='a6474041-701d-47f8-8705-1a3f8b80baec', task_title='very cool', task_description='dfadfasd', task_category='Medium Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority)]
+INFO:list returned after deleting task = [TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority')] 
+INFO:{}
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=9d0da87b-5576-40d0-83b0-17e4a3d02f7c, title=very high, description=not so much, category=Medium Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=b2d1687d-8d98-4660-9c26-5baa6bc264cb, title=frontend, description=froneend, category=High Priority), Task(id=9d0da87b-5576-40d0-83b0-17e4a3d02f7c, title=very high, description=not so much, category=Medium Priority)]
+INFO:list returned after addition for user 9df10483-7a4e-414e-9913-611a4db6637d = [TaskDto(task_id='b2d1687d-8d98-4660-9c26-5baa6bc264cb', task_title='frontend', task_description='froneend', task_category='High Priority'), TaskDto(task_id='9d0da87b-5576-40d0-83b0-17e4a3d02f7c', task_title='very high', task_description='not so much', task_category='Medium Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=9d0da87b-5576-40d0-83b0-17e4a3d02f7c, title=very high, description=not so much, category=Medium Priority)]
+INFO:list generated for user9df10483-7a4e-414e-9913-611a4db6637d : [Task(id=9d0da87b-5576-40d0-83b0-17e4a3d02f7c, title=very high, description=not so much, category=Medium Priority)]
+INFO:list returned after deleting task = [TaskDto(task_id='9d0da87b-5576-40d0-83b0-17e4a3d02f7c', task_title='very high', task_description='not so much', task_category='Medium Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+INFO:user successfully signed in user_id='string' first_name='string' last_name='string' user_name='string' email='string' phone='string' password='string' 
+INFO:{}
+INFO:{}
+INFO:user successfully signed in user_id='1ceab05a-c8c9-4269-a8c4-05b53370f95d' first_name='testtdaf' last_name='asdfadsfsa' user_name='adsfadfasf' email='test@gmail.com' phone='asQW12@' password='asQW12@' 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWRmMTA0ODMtN2E0ZS00MTRlLTk5MTMtNjExYTRkYjY2MzdkIiwiZXhwIjoxNzM0ODc1MjAwfQ.jM44NpaDHQY9nxeHdxOFiD7-RF6x15MDCGimlU7bgs4'}
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[0:8]
+DEBUG:Calling on_field_data with data[9:25]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_field_start with no data
+DEBUG:Calling on_field_name with data[26:34]
+DEBUG:Calling on_field_data with data[35:44]
+DEBUG:Calling on_field_end with no data
+DEBUG:Calling on_end with no data
+INFO:payload : {'user_id': '1ceab05a-c8c9-4269-a8c4-05b53370f95d', 'exp': datetime.datetime(2024, 12, 22, 14, 24, 3, 285091, tzinfo=datetime.timezone.utc)}
+INFO:ENCODED : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g
+INFO:user successfully logged in email='test@gmail.com' password='asQW12@' 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = []
+ERROR:No tasks found for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d: task not found
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = []
+ERROR:No tasks found for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d: task not found
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=927003e9-0aab-4080-8cd5-edc5cfa20a28, title=three, description=three, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=927003e9-0aab-4080-8cd5-edc5cfa20a28, title=three, description=three, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='927003e9-0aab-4080-8cd5-edc5cfa20a28', task_title='three', task_description='three', task_category='High Priority')] 
+INFO:{}
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=d3374b26-cf5b-4ead-b0dd-6e055da493de, title=three, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=d3374b26-cf5b-4ead-b0dd-6e055da493de, title=three, description=three - updated, category=High Priority)]
+INFO:list returned after updating task for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='d3374b26-cf5b-4ead-b0dd-6e055da493de', task_title='three', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after updating task for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority), Task(id=bf9f284c-6fe4-4f00-8488-21f880cd27f5, title=fourth tasks, description=fourth to delete, category=Low Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority), Task(id=bf9f284c-6fe4-4f00-8488-21f880cd27f5, title=fourth tasks, description=fourth to delete, category=Low Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority'), TaskDto(task_id='bf9f284c-6fe4-4f00-8488-21f880cd27f5', task_title='fourth tasks', task_description='fourth to delete', task_category='Low Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after deleting task = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 
+INFO:{'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWNlYWIwNWEtYzhjOS00MjY5LWE4YzQtMDViNTMzNzBmOTVkIiwiZXhwIjoxNzM0ODc3NDQzfQ.aVhssfHK7ngLdo_n2a5FDu5TBP0lnP9cZ2R7a6Evc6g'}
+INFO:DECODED : 
+INFO:user_id requested : 1ceab05a-c8c9-4269-a8c4-05b53370f95d
+INFO:reached get_all_tasks tasks found = [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list generated for user1ceab05a-c8c9-4269-a8c4-05b53370f95d : [Task(id=2abe559b-e266-4a14-811a-db650cb94f9a, title=first task, description=f1, category=Medium Priority), Task(id=efa8a265-8210-43fb-9c46-9711f1868bf8, title=secon task, description=sec, category=Medium Priority), Task(id=4e6e6b19-52d1-47d9-a433-dbb737b4b485, title=three - updated, description=three - updated, category=High Priority)]
+INFO:list returned after addition for user 1ceab05a-c8c9-4269-a8c4-05b53370f95d = [TaskDto(task_id='2abe559b-e266-4a14-811a-db650cb94f9a', task_title='first task', task_description='f1', task_category='Medium Priority'), TaskDto(task_id='efa8a265-8210-43fb-9c46-9711f1868bf8', task_title='secon task', task_description='sec', task_category='Medium Priority'), TaskDto(task_id='4e6e6b19-52d1-47d9-a433-dbb737b4b485', task_title='three - updated', task_description='three - updated', task_category='High Priority')] 

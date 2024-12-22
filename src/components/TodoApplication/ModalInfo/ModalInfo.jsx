@@ -9,7 +9,6 @@ import "./ModalInfo.css";
 // in case we call model info for updating,this information should be pre filled
 export const ModalInfo = ({ title = "", description = "", category = "" }) => {
   const {
-    tasks,
     globalTasks,
     setGlobalTasks,
     setTasks,
@@ -39,14 +38,19 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
   });
 
   // used to update Task when updateTask.isUpdate === true
-  const updateTask = async (id, updatedTask) => {
+  const updateTask = async (oldTaskId, updatedTask) => {
     try {
-      const response = await fetch(`${backendAddr}/crud/update_task?id=${id}`, {
+      const response = await fetch(`${backendAddr}/v1/crud/update_task`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(updatedTask), // Send updated task as JSON
+
+        credentials: "include", // This ensures that cookies are sent with the request, including HttpOnly cookies
+        body: JSON.stringify({
+          old_task_id: oldTaskId,
+          new_task: updatedTask,
+        }), // Send updated task with old task ID as JSON
       });
 
       if (!response.ok) {
@@ -55,13 +59,23 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
 
       // Parse the response JSON to get the updated list of tasks
       const updatedTasks = await response.json();
-      setGlobalTasks(updatedTasks);
-      setTasks(updatedTasks);
+      let list = updatedTasks.task_list;
+      let taskList = list.map((task) => {
+        let t = {
+          taskId: task.task_id,
+          taskTitle: task.task_title,
+          taskDescription: task.task_description,
+          taskCategory: task.task_category,
+        };
+        return t;
+      });
+
+      setGlobalTasks(taskList);
+      setTasks(taskList);
     } catch (err) {
       console.log("Error while updating task:", err);
     }
   };
-
   const [localModalDeets, setLocalModalDeets] = useState({
     title: title,
     description: description,
@@ -156,6 +170,7 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
       };
 
       if (updateFlag.isUpdate === true) {
+        console.log(newTask);
         updateTask(updateFlag.taskId, newTask);
         let copyUpdateFlag = { ...updateFlag };
         copyUpdateFlag.isUpdate = false;

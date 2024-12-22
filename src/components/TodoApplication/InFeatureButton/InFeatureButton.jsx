@@ -8,15 +8,14 @@ export const InFeatureButton = ({ action, image, id }) => {
 
   async function delete_task(taskId) {
     try {
-      const response = await fetch(
-        `${backendAddr}/crud/delete_task?id=${taskId}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+      const response = await fetch(`${backendAddr}/v1/crud/delete_task?`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        credentials: "include",
+        body: JSON.stringify(taskId), // Send task ID as a JSON string
+      });
 
       if (!response.ok) {
         throw new Error("Error deleting task");
@@ -24,9 +23,19 @@ export const InFeatureButton = ({ action, image, id }) => {
 
       // Parse the response JSON to get the updated tasks list
       const updatedTasks = await response.json();
+      let list = updatedTasks.task_list;
+      let taskList = list.map((task) => {
+        let t = {
+          taskId: task.task_id,
+          taskTitle: task.task_title,
+          taskDescription: task.task_description,
+          taskCategory: task.task_category,
+        };
+        return t;
+      });
 
       // Update the tasks list with the updated data
-      setTasks(updatedTasks);
+      setTasks(taskList);
     } catch (err) {
       console.log("Error while deleting task:", err);
     }

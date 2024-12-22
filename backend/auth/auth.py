@@ -58,7 +58,14 @@ async def log_in(response: Response, form_data: OAuth2PasswordRequestForm = Depe
         )
         access_token = verify_login(login_dto, repo)
         custom_logger.info(f"user successfully logged in {login_dto} ")
-        response.set_cookie(key="access_token", value=access_token, httponly=True)
+        response.set_cookie(
+            key="access_token",
+            value=access_token,
+            httponly=True,
+            secure=False,
+            path="/",
+            samesite="lax",
+        )
         return {"access_token": ":)"}
 
     except UserNotFound as e:

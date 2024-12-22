@@ -87,6 +87,7 @@ async function sendLoginDeets(loginDeets) {
 
   const response = await fetch(`${backendAddr}/v1/auth/token`, {
     method: "POST",
+    credentials: "include", //--> send/receive cookies
     headers: {
       Accept: "application/json",
       "Content-Type": "application/x-www-form-urlencoded", // This matches the curl Content-Type
@@ -94,16 +95,16 @@ async function sendLoginDeets(loginDeets) {
     body: formData, // The form data is automatically encoded as application/x-www-form-urlencoded
   });
 
-  if (response.status == 200) {
+  if (response.status === 200) {
     alert("Authenticated");
     return 200;
   }
 
-  if (response.status == 404) {
+  if (response.status === 404) {
     alert("User doesnt exist");
   }
 
-  if (response.status == 400) {
+  if (response.status === 400) {
     alert("Invalid credentials");
   }
 }
