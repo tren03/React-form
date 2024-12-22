@@ -1,7 +1,8 @@
 from typing import Annotated
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Response, status
 from fastapi.security import OAuth2PasswordRequestForm
+from starlette.status import HTTP_200_OK
 
 from backend.auth.auth_utils import verify_login
 from backend.auth.jwt_utils import get_current_user
@@ -40,7 +41,7 @@ async def sign_in(user_sign_in_dto: UserSignInDto):
     summary="Create access token for user",
     response_model=TokenDto,
 )
-async def log_in(form_data: OAuth2PasswordRequestForm = Depends()):
+async def log_in(response: Response, form_data: OAuth2PasswordRequestForm = Depends()):
     """
     Handles user log-in by doing auth and returnint access token
     """
@@ -50,7 +51,8 @@ async def log_in(form_data: OAuth2PasswordRequestForm = Depends()):
         )
         access_token = verify_login(login_dto, repo)
         custom_logger.info(f"user successfully logged in {login_dto} ")
-        return {"access_token": access_token, "token_type": "bearer"}
+        response.set_cookie(key="access_token", value=access_token, httponly=True)
+        return {"access_token": ":)"}
 
     except UserNotFound as e:
         custom_logger.error(f"Invalid login attempt: {e}")
