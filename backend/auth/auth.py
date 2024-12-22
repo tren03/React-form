@@ -1,22 +1,19 @@
+from typing import Annotated
+
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 
 from backend.auth.auth_utils import verify_login
-from backend.conversions.conversion_interface import IConversion
-from backend.conversions.sqlite_conversions import SqliteConversion
-from backend.db.db_connection import get_session
-from backend.errors.error import (CustomError, ExpiredJWT, InvalidJWT,
-                                  InvalidUserLogin, UserNotFound)
+from backend.auth.jwt_utils import get_current_user
+from backend.errors.error import CustomError, InvalidUserLogin, UserNotFound
 from backend.logger.logger import custom_logger
 from backend.models.dto import (LoginDetailsDto, TokenDto, UserDto,
                                 UserSignInDto)
 from backend.models.entitiy import UserEntity
-from backend.repo.repo_interface import IRepo
-from backend.repo.sqlite_repo import SqliteRepo
+from backend.repo.current_repo import get_repo
 
 router = APIRouter()
-converter: IConversion = SqliteConversion()
-repo: IRepo = SqliteRepo(converter, get_session())
+repo = get_repo()
 
 
 @router.post("/signin")
@@ -39,8 +36,8 @@ async def sign_in(user_sign_in_dto: UserSignInDto):
 
 
 @router.post(
-    "/login",
-    summary="Create access and refresh tokens for user",
+    "/token",
+    summary="Create access token for user",
     response_model=TokenDto,
 )
 async def log_in(form_data: OAuth2PasswordRequestForm = Depends()):
@@ -53,7 +50,7 @@ async def log_in(form_data: OAuth2PasswordRequestForm = Depends()):
         )
         access_token = verify_login(login_dto, repo)
         custom_logger.info(f"user successfully logged in {login_dto} ")
-        return {"access_token": access_token}
+        return {"access_token": access_token, "token_type": "bearer"}
 
     except UserNotFound as e:
         custom_logger.error(f"Invalid login attempt: {e}")
@@ -75,3 +72,8 @@ async def log_in(form_data: OAuth2PasswordRequestForm = Depends()):
             status_code=status.HTTP_403_FORBIDDEN,
             detail="An error occurred while processing your login. Please try again later.",
         )
+
+
+@router.get("/items/me")
+async def read_items(payload: Annotated[dict, Depends(get_current_user)]):
+    return payload

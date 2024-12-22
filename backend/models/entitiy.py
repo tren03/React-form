@@ -47,7 +47,7 @@ class UserEntity(BaseModel):
         user_sign_in_dto: UserSignInDto,
     ) -> "UserEntity":
         """
-        Converts a UserDto (Pydantic DTO) to a UserEntity
+        Converts a user_sign_in_dto (Pydantic DTO) to a UserEntity
         """
         try:
             if not user_sign_in_dto.user_id:

@@ -3,19 +3,14 @@ from typing import Annotated
 from fastapi import APIRouter, HTTPException, status
 from fastapi.params import Body
 
-from backend.conversions.conversion_interface import IConversion
-from backend.conversions.sqlite_conversions import SqliteConversion
-from backend.db.db_connection import get_session
 from backend.errors.error import CustomError, TaskNotFound, UserNotFound
 from backend.logger.logger import custom_logger
 from backend.models.dto import TaskDto
-from backend.models.entitiy import TaskEntity, UserEntity
-from backend.repo.repo_interface import IRepo
-from backend.repo.sqlite_repo import SqliteRepo
+from backend.models.entitiy import TaskEntity
+from backend.repo.current_repo import get_repo
 
 router = APIRouter()
-converter: IConversion = SqliteConversion()
-repo: IRepo = SqliteRepo(converter, get_session())
+repo = get_repo()
 
 
 @router.post("/add_task")
