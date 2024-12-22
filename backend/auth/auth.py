@@ -6,7 +6,8 @@ from starlette.status import HTTP_200_OK
 
 from backend.auth.auth_utils import verify_login
 from backend.auth.jwt_utils import get_current_user
-from backend.errors.error import CustomError, InvalidUserLogin, UserNotFound
+from backend.errors.error import (CustomError, DuplicateUserError,
+                                  InvalidUserLogin, UserNotFound)
 from backend.logger.logger import custom_logger
 from backend.models.dto import (LoginDetailsDto, TokenDto, UserDto,
                                 UserSignInDto)
@@ -25,9 +26,15 @@ async def sign_in(user_sign_in_dto: UserSignInDto):
     try:
         user_entity = UserEntity.user_sign_in_dto_to_user_entity(user_sign_in_dto)
         repo.add_user(user_entity)
-
         custom_logger.info(f"user successfully signed in {user_entity} ")
         return {"message": "successful"}
+    except DuplicateUserError as e:
+        custom_logger.error(e.message())
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=e.message(),
+        )
+
     except CustomError as e:
         custom_logger.error("error while signing new user", e)
         raise HTTPException(
@@ -71,7 +78,7 @@ async def log_in(response: Response, form_data: OAuth2PasswordRequestForm = Depe
     except CustomError as e:
         custom_logger.error(f"Unexpected error during login: {e}")
         raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
+            status_code=status.HTTP_400_BAD_REQUEST,
             detail="An error occurred while processing your login. Please try again later.",
         )
 

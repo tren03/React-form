@@ -31,7 +31,7 @@ function isPassValid(password) {
   }
 }
 
-function submitForm(
+async function submitForm(
   event,
   loginDeets,
   setLoginDeets,
@@ -67,31 +67,46 @@ function submitForm(
     return;
   } else {
     //need to validate login and get jwt
-    sendLoginDeets(loginDeets);
-
-    setLoginDeets({
-      email: "",
-      password: "",
-    });
+    let stat = await sendLoginDeets(loginDeets);
+    // setLoginDeets({
+    //   email: "",
+    //   password: "",
+    // });
+    console.log(stat);
+    if (stat === 200) {
+      console.log("reaacheddd");
+      navigate("/todo");
+    }
   }
 }
 
 async function sendLoginDeets(loginDeets) {
-  const modified_deets = {
-    email: loginDeets.email,
-    password: loginDeets.password,
-  };
+  const formData = new URLSearchParams();
+  formData.append("username", loginDeets.email); // Assuming loginDeets.email is used as the username
+  formData.append("password", loginDeets.password);
 
-  const response = await fetch(`${backendAddr}/auth/login`, {
+  const response = await fetch(`${backendAddr}/v1/auth/token`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      Accept: "application/json",
+      "Content-Type": "application/x-www-form-urlencoded", // This matches the curl Content-Type
     },
-    body: JSON.stringify(modified_deets), // Send the task data in JSON format
+    body: formData, // The form data is automatically encoded as application/x-www-form-urlencoded
   });
-  console.log(response);
-}
 
+  if (response.status == 200) {
+    alert("Authenticated");
+    return 200;
+  }
+
+  if (response.status == 404) {
+    alert("User doesnt exist");
+  }
+
+  if (response.status == 400) {
+    alert("Invalid credentials");
+  }
+}
 export {
   handleEmailChange,
   handlePassChange,

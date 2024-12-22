@@ -23,7 +23,7 @@ class SqliteRepo(IRepo):
 
     def add_user(self, user_to_add: UserEntity):
         try:
-            stmt = select(UserModel).where(UserModel.user_id == user_to_add.user_id)
+            stmt = select(UserModel).where(UserModel.email == user_to_add.email)
             result = self.session.execute(stmt)
             user = result.scalars().first()
 
@@ -36,6 +36,7 @@ class SqliteRepo(IRepo):
 
         except DuplicateUserError as e:
             custom_logger.error(e.message())
+            raise e
 
         except UserModelToUserEntityConversionError as e:
             custom_logger.error(e.message())

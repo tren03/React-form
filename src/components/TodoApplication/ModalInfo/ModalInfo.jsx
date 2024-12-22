@@ -86,11 +86,12 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
 
   async function add_new_task(newTask) {
     try {
-      const response = await fetch(`${backendAddr}/crud/add_task`, {
+      const response = await fetch(`${backendAddr}/v1/crud/add_task`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include", // This ensures that cookies are sent with the request, including HttpOnly cookies
         body: JSON.stringify(newTask), // Send the task data in JSON format
       });
 
@@ -100,10 +101,19 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
 
       // Parse the response JSON
       const updatedTasks = await response.json();
-
+      let list = updatedTasks.task_list;
+      let taskList = list.map((task) => {
+        let t = {
+          taskId: task.task_id,
+          taskTitle: task.task_title,
+          taskDescription: task.task_description,
+          taskCategory: task.task_category,
+        };
+        return t;
+      });
       // Update the tasks list with the updated data
-      setTasks(updatedTasks);
-      setGlobalTasks(updatedTasks);
+      setTasks(taskList);
+      setGlobalTasks(taskList);
 
       // Close the modal after adding the task
       setShowModal(false);
@@ -140,9 +150,9 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
 
       //id added by db itself
       let newTask = {
-        taskTitle: localModalDeets.title,
-        taskDescription: localModalDeets.description,
-        taskCategory: localModalDeets.category,
+        task_title: localModalDeets.title,
+        task_description: localModalDeets.description,
+        task_category: localModalDeets.category,
       };
 
       if (updateFlag.isUpdate === true) {
@@ -209,13 +219,3 @@ export const ModalInfo = ({ title = "", description = "", category = "" }) => {
     </div>
   );
 };
-// <ModalField
-//   type="text"
-//   name="category"
-//   id="category"
-//   placeholder="Category of the task"
-//   value={localModalDeets.category}
-//   localModalDeets={localModalDeets}
-//   setlocalModalDeets={setLocalModalDeets}
-//   hasError={err.category ? true : false}
-// />

@@ -132,7 +132,7 @@ async def update_task(
         )
 
 
-@router.post("/get_all_tasks")
+@router.get("/get_all_tasks")
 async def get_all_tasks(user_id: Annotated[str, Depends(get_current_user)]):
     """
     Given a user_id, returns all tasks of that user (taskes user_id as parameter, not body)

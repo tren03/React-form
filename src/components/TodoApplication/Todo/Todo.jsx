@@ -10,15 +10,15 @@ import "./Todo.css";
 
 export const Todo = () => {
   const navigate = useNavigate();
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-
-    if (isLoggedIn !== "true") {
-      // If user is not logged in, redirect to login page
-      console.log("User is not logged in, redirecting to login page.");
-      navigate("/");
-    }
-  });
+  // useEffect(() => {
+  //   const isLoggedIn = localStorage.getItem("isLoggedIn");
+  //
+  //   if (isLoggedIn !== "true") {
+  //     // If user is not logged in, redirect to login page
+  //     console.log("User is not logged in, redirecting to login page.");
+  //     navigate("/");
+  //   }
+  // });
 
   return (
     <TaskContextProvider>

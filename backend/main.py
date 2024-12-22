@@ -1,9 +1,8 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.auth.auth import router as auth_router
-from backend.crud.crud import router as crud_router
 from backend.logger.logger import custom_logger
+from backend.v1.routes import router as v1_router
 
 app = FastAPI()
 
@@ -30,6 +29,7 @@ async def create_auth_header(
     Authorization header and modify the request (unless the header already
     exists!)
     """
+    custom_logger.info(request.cookies)
     if "Authorization" not in request.headers and "access_token" in request.cookies:
         access_token = request.cookies["access_token"]
 
@@ -45,5 +45,4 @@ async def create_auth_header(
     return response
 
 
-app.include_router(crud_router, prefix="/crud", tags=["crud operations"])
-app.include_router(auth_router, prefix="/auth", tags=["auth operations"])
+app.include_router(v1_router, prefix="/v1", tags=["Version 1"])

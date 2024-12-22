@@ -12,7 +12,7 @@ from backend.errors.error import CustomError, ExpiredJWT, InvalidJWT
 from backend.logger.logger import custom_logger
 
 load_dotenv()
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="v1/auth/token")
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")
 SECRET_KEY = os.getenv("SECRET_KEY")
